@@ -28,6 +28,8 @@ class PeopleRouletteViewController: UIViewController {
         let viewController = viewControllerInjector.inject(viewController: ViewIdentifier.usersListViewController, in: Storyboard.main) as? UsersListViewController ?? UsersListViewController()
         return viewController
     }()
+    
+    private var numberOfPeople = Int.zero
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -70,6 +72,7 @@ class PeopleRouletteViewController: UIViewController {
     }
     
     @IBAction func roulette(_ sender: UIButton) {
+        usersListViewController.usersListViewModel.setup(with: numberOfPeople)
         navigationController?.pushViewController(usersListViewController, animated: true)
     }
 }
@@ -88,7 +91,8 @@ extension PeopleRouletteViewController: UIPickerViewDelegate, UIPickerViewDataSo
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        quantityTextField.text = String(peopleRouletteViewModel.pickerData[row])
+        numberOfPeople = peopleRouletteViewModel.pickerData[row]
+        quantityTextField.text = String(numberOfPeople)
     }
 }
 

@@ -33,6 +33,8 @@
 		393445052195215300974CE8 /* UsersListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 393445042195215300974CE8 /* UsersListViewModel.swift */; };
 		50D8D7D8BFD604F1A1C8E904 /* Pods_PeopleRoulette.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2F63306F40D9DEACD4B2B52 /* Pods_PeopleRoulette.framework */; };
 		514AB7F0CD1E4009E4C446D3 /* Pods_PeopleRoulette_PeopleRouletteTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0187F46001111C981F6B770 /* Pods_PeopleRoulette_PeopleRouletteTests.framework */; };
+		AB1FFFED2195EE17000D1120 /* RouletteHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB1FFFEC2195EE17000D1120 /* RouletteHandler.swift */; };
+		AB1FFFEF2195F161000D1120 /* Array+Darwin.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB1FFFEE2195F161000D1120 /* Array+Darwin.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +80,8 @@
 		76C955C6947BADED57E9C9C9 /* Pods-PeopleRoulette.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PeopleRoulette.release.xcconfig"; path = "Pods/Target Support Files/Pods-PeopleRoulette/Pods-PeopleRoulette.release.xcconfig"; sourceTree = "<group>"; };
 		A701FBC437DAEAF6FED8A818 /* Pods-PeopleRoulette-PeopleRouletteTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PeopleRoulette-PeopleRouletteTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PeopleRoulette-PeopleRouletteTests/Pods-PeopleRoulette-PeopleRouletteTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A8BB10ECB758BA7EA23DE7FE /* Pods-PeopleRoulette.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PeopleRoulette.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PeopleRoulette/Pods-PeopleRoulette.debug.xcconfig"; sourceTree = "<group>"; };
+		AB1FFFEC2195EE17000D1120 /* RouletteHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouletteHandler.swift; sourceTree = "<group>"; };
+		AB1FFFEE2195F161000D1120 /* Array+Darwin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Darwin.swift"; sourceTree = "<group>"; };
 		E0187F46001111C981F6B770 /* Pods_PeopleRoulette_PeopleRouletteTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PeopleRoulette_PeopleRouletteTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2F63306F40D9DEACD4B2B52 /* Pods_PeopleRoulette.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PeopleRoulette.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -168,6 +172,7 @@
 			isa = PBXGroup;
 			children = (
 				391E84ED219433D1006ADAAF /* String+PR.swift */,
+				AB1FFFEE2195F161000D1120 /* Array+Darwin.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -234,6 +239,7 @@
 			isa = PBXGroup;
 			children = (
 				391E84E7219432B3006ADAAF /* RealmHandler.swift */,
+				AB1FFFEC2195EE17000D1120 /* RouletteHandler.swift */,
 			);
 			path = Handlers;
 			sourceTree = "<group>";
@@ -522,6 +528,8 @@
 				391E851221943B1D006ADAAF /* UsersHandler.swift in Sources */,
 				391E84EB2194337A006ADAAF /* User.swift in Sources */,
 				391E84FE21943665006ADAAF /* UserDetailsViewController.swift in Sources */,
+				AB1FFFEF2195F161000D1120 /* Array+Darwin.swift in Sources */,
+				AB1FFFED2195EE17000D1120 /* RouletteHandler.swift in Sources */,
 				391E85002194366D006ADAAF /* UserDetailsViewModel.swift in Sources */,
 				393445032195210E00974CE8 /* UsersListViewController.swift in Sources */,
 				391E84F621943609006ADAAF /* DependencyAssembly.swift in Sources */,

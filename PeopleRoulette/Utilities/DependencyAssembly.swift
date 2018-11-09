@@ -20,6 +20,10 @@ extension SwinjectStoryboard {
             controller.viewControllerInjector = resolver.resolve(ViewControllerInjecting.self)
         }
         
+        defaultContainer.storyboardInitCompleted(UsersListViewController.self) { resolver, controller in
+            controller.usersListViewModel = resolver.resolve(UsersListViewModel.self)
+        }
+        
         defaultContainer.storyboardInitCompleted(UserDetailsViewController.self) { resolver, controller in
             controller.userDetailsViewModel = resolver.resolve(UserDetailsViewModel.self)
         }
@@ -30,6 +34,12 @@ extension SwinjectStoryboard {
             let viewModel = PeopleRouletteViewModel()
             viewModel.usersDownloader = resolver.resolve(UsersDownloading.self)
             viewModel.usersRetriever = resolver.resolve(UsersRetrieving.self)
+            return viewModel
+        }
+        
+        defaultContainer.register(UsersListViewModel.self) { resolver in
+            let viewModel = UsersListViewModel()
+            viewModel.peopleRoulette = resolver.resolve(PeopleRouletting.self)
             return viewModel
         }
         
@@ -77,6 +87,12 @@ extension SwinjectStoryboard {
         defaultContainer.register(UsersRetrieving.self) { resolver in
             let handler = UsersHandler()
             handler.realmRetriever = resolver.resolve(ObjectRetrieving.self)
+            return handler
+        }
+        
+        defaultContainer.register(PeopleRouletting.self) { resolver in
+            let handler = RouletteHandler()
+            handler.usersRetriever = resolver.resolve(UsersRetrieving.self)
             return handler
         }
     }
