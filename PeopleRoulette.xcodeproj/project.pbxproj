@@ -1,0 +1,809 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		391E84C521942FEC006ADAAF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391E84C421942FEC006ADAAF /* AppDelegate.swift */; };
+		391E84C721942FEC006ADAAF /* PeopleRouletteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391E84C621942FEC006ADAAF /* PeopleRouletteViewController.swift */; };
+		391E84CA21942FEC006ADAAF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 391E84C821942FEC006ADAAF /* Main.storyboard */; };
+		391E84CC21942FED006ADAAF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 391E84CB21942FED006ADAAF /* Assets.xcassets */; };
+		391E84CF21942FED006ADAAF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 391E84CD21942FED006ADAAF /* LaunchScreen.storyboard */; };
+		391E84DA21942FED006ADAAF /* PeopleRouletteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391E84D921942FED006ADAAF /* PeopleRouletteTests.swift */; };
+		391E84E621943241006ADAAF /* Constants+Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391E84E521943241006ADAAF /* Constants+Networking.swift */; };
+		391E84E8219432B3006ADAAF /* RealmHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391E84E7219432B3006ADAAF /* RealmHandler.swift */; };
+		391E84EB2194337A006ADAAF /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391E84EA2194337A006ADAAF /* User.swift */; };
+		391E84EE219433D1006ADAAF /* String+PR.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391E84ED219433D1006ADAAF /* String+PR.swift */; };
+		391E84F2219435B9006ADAAF /* Constants+ViewIdentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391E84F1219435B9006ADAAF /* Constants+ViewIdentifiers.swift */; };
+		391E84F4219435F4006ADAAF /* ViewControllerInjector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391E84F3219435F4006ADAAF /* ViewControllerInjector.swift */; };
+		391E84F621943609006ADAAF /* DependencyAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391E84F521943609006ADAAF /* DependencyAssembly.swift */; };
+		391E84FC21943655006ADAAF /* PeopleRouletteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391E84FB21943655006ADAAF /* PeopleRouletteViewModel.swift */; };
+		391E84FE21943665006ADAAF /* UserDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391E84FD21943665006ADAAF /* UserDetailsViewController.swift */; };
+		391E85002194366D006ADAAF /* UserDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391E84FF2194366D006ADAAF /* UserDetailsViewModel.swift */; };
+		391E850821943875006ADAAF /* APIRequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391E850721943875006ADAAF /* APIRequestHandler.swift */; };
+		391E850A21943879006ADAAF /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391E850921943879006ADAAF /* APIRequest.swift */; };
+		391E850C2194387E006ADAAF /* NetworkStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391E850B2194387E006ADAAF /* NetworkStatus.swift */; };
+		391E850E219438BB006ADAAF /* Constants+AlertMessages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391E850D219438BB006ADAAF /* Constants+AlertMessages.swift */; };
+		391E8510219438F9006ADAAF /* Constants+Numeric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391E850F219438F9006ADAAF /* Constants+Numeric.swift */; };
+		391E851221943B1D006ADAAF /* UsersHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391E851121943B1C006ADAAF /* UsersHandler.swift */; };
+		393445032195210E00974CE8 /* UsersListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 393445022195210E00974CE8 /* UsersListViewController.swift */; };
+		393445052195215300974CE8 /* UsersListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 393445042195215300974CE8 /* UsersListViewModel.swift */; };
+		50D8D7D8BFD604F1A1C8E904 /* Pods_PeopleRoulette.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2F63306F40D9DEACD4B2B52 /* Pods_PeopleRoulette.framework */; };
+		514AB7F0CD1E4009E4C446D3 /* Pods_PeopleRoulette_PeopleRouletteTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0187F46001111C981F6B770 /* Pods_PeopleRoulette_PeopleRouletteTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		391E84D621942FED006ADAAF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 391E84B921942FEC006ADAAF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 391E84C021942FEC006ADAAF;
+			remoteInfo = PeopleRoulette;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		391E84C121942FEC006ADAAF /* PeopleRoulette.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PeopleRoulette.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		391E84C421942FEC006ADAAF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		391E84C621942FEC006ADAAF /* PeopleRouletteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleRouletteViewController.swift; sourceTree = "<group>"; };
+		391E84C921942FEC006ADAAF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		391E84CB21942FED006ADAAF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		391E84CE21942FED006ADAAF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		391E84D021942FED006ADAAF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		391E84D521942FED006ADAAF /* PeopleRouletteTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PeopleRouletteTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		391E84D921942FED006ADAAF /* PeopleRouletteTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleRouletteTests.swift; sourceTree = "<group>"; };
+		391E84DB21942FED006ADAAF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		391E84E521943241006ADAAF /* Constants+Networking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Constants+Networking.swift"; sourceTree = "<group>"; };
+		391E84E7219432B3006ADAAF /* RealmHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmHandler.swift; sourceTree = "<group>"; };
+		391E84EA2194337A006ADAAF /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		391E84ED219433D1006ADAAF /* String+PR.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+PR.swift"; sourceTree = "<group>"; };
+		391E84F1219435B9006ADAAF /* Constants+ViewIdentifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Constants+ViewIdentifiers.swift"; sourceTree = "<group>"; };
+		391E84F3219435F4006ADAAF /* ViewControllerInjector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerInjector.swift; sourceTree = "<group>"; };
+		391E84F521943609006ADAAF /* DependencyAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DependencyAssembly.swift; sourceTree = "<group>"; };
+		391E84FB21943655006ADAAF /* PeopleRouletteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleRouletteViewModel.swift; sourceTree = "<group>"; };
+		391E84FD21943665006ADAAF /* UserDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsViewController.swift; sourceTree = "<group>"; };
+		391E84FF2194366D006ADAAF /* UserDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsViewModel.swift; sourceTree = "<group>"; };
+		391E850721943875006ADAAF /* APIRequestHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIRequestHandler.swift; sourceTree = "<group>"; };
+		391E850921943879006ADAAF /* APIRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
+		391E850B2194387E006ADAAF /* NetworkStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkStatus.swift; sourceTree = "<group>"; };
+		391E850D219438BB006ADAAF /* Constants+AlertMessages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Constants+AlertMessages.swift"; sourceTree = "<group>"; };
+		391E850F219438F9006ADAAF /* Constants+Numeric.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Constants+Numeric.swift"; sourceTree = "<group>"; };
+		391E851121943B1C006ADAAF /* UsersHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersHandler.swift; sourceTree = "<group>"; };
+		393445022195210E00974CE8 /* UsersListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersListViewController.swift; sourceTree = "<group>"; };
+		393445042195215300974CE8 /* UsersListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersListViewModel.swift; sourceTree = "<group>"; };
+		59A0F534D1168164B19F47F1 /* Pods-PeopleRoulette-PeopleRouletteTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PeopleRoulette-PeopleRouletteTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PeopleRoulette-PeopleRouletteTests/Pods-PeopleRoulette-PeopleRouletteTests.release.xcconfig"; sourceTree = "<group>"; };
+		76C955C6947BADED57E9C9C9 /* Pods-PeopleRoulette.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PeopleRoulette.release.xcconfig"; path = "Pods/Target Support Files/Pods-PeopleRoulette/Pods-PeopleRoulette.release.xcconfig"; sourceTree = "<group>"; };
+		A701FBC437DAEAF6FED8A818 /* Pods-PeopleRoulette-PeopleRouletteTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PeopleRoulette-PeopleRouletteTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PeopleRoulette-PeopleRouletteTests/Pods-PeopleRoulette-PeopleRouletteTests.debug.xcconfig"; sourceTree = "<group>"; };
+		A8BB10ECB758BA7EA23DE7FE /* Pods-PeopleRoulette.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PeopleRoulette.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PeopleRoulette/Pods-PeopleRoulette.debug.xcconfig"; sourceTree = "<group>"; };
+		E0187F46001111C981F6B770 /* Pods_PeopleRoulette_PeopleRouletteTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PeopleRoulette_PeopleRouletteTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F2F63306F40D9DEACD4B2B52 /* Pods_PeopleRoulette.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PeopleRoulette.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		391E84BE21942FEC006ADAAF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				50D8D7D8BFD604F1A1C8E904 /* Pods_PeopleRoulette.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		391E84D221942FED006ADAAF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				514AB7F0CD1E4009E4C446D3 /* Pods_PeopleRoulette_PeopleRouletteTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		391E84B821942FEC006ADAAF = {
+			isa = PBXGroup;
+			children = (
+				391E84C321942FEC006ADAAF /* PeopleRoulette */,
+				391E84D821942FED006ADAAF /* PeopleRouletteTests */,
+				391E84C221942FEC006ADAAF /* Products */,
+				CFE6E24BB7C13B2768E8090F /* Pods */,
+				4BFD60B75BDDD0719A9B4468 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		391E84C221942FEC006ADAAF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				391E84C121942FEC006ADAAF /* PeopleRoulette.app */,
+				391E84D521942FED006ADAAF /* PeopleRouletteTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		391E84C321942FEC006ADAAF /* PeopleRoulette */ = {
+			isa = PBXGroup;
+			children = (
+				391E84C421942FEC006ADAAF /* AppDelegate.swift */,
+				391E84E92194336D006ADAAF /* Model */,
+				391E84E421943235006ADAAF /* Utilities */,
+				391E84EC219433C0006ADAAF /* Extensions */,
+				391E84F72194361A006ADAAF /* Features */,
+				391E850121943678006ADAAF /* Resources */,
+			);
+			path = PeopleRoulette;
+			sourceTree = "<group>";
+		};
+		391E84D821942FED006ADAAF /* PeopleRouletteTests */ = {
+			isa = PBXGroup;
+			children = (
+				391E84D921942FED006ADAAF /* PeopleRouletteTests.swift */,
+				391E84DB21942FED006ADAAF /* Info.plist */,
+			);
+			path = PeopleRouletteTests;
+			sourceTree = "<group>";
+		};
+		391E84E421943235006ADAAF /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				391E84F521943609006ADAAF /* DependencyAssembly.swift */,
+				391E850321943694006ADAAF /* Constants */,
+				391E850421943699006ADAAF /* Handlers */,
+				391E850621943867006ADAAF /* Network */,
+				391E85052194369F006ADAAF /* Services */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		391E84E92194336D006ADAAF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				391E84EA2194337A006ADAAF /* User.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		391E84EC219433C0006ADAAF /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				391E84ED219433D1006ADAAF /* String+PR.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		391E84F72194361A006ADAAF /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				391E84F92194363D006ADAAF /* Roulette */,
+				39344501219520FC00974CE8 /* List */,
+				391E84FA21943644006ADAAF /* Details */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		391E84F92194363D006ADAAF /* Roulette */ = {
+			isa = PBXGroup;
+			children = (
+				391E84C621942FEC006ADAAF /* PeopleRouletteViewController.swift */,
+				391E84FB21943655006ADAAF /* PeopleRouletteViewModel.swift */,
+			);
+			path = Roulette;
+			sourceTree = "<group>";
+		};
+		391E84FA21943644006ADAAF /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				391E84FD21943665006ADAAF /* UserDetailsViewController.swift */,
+				391E84FF2194366D006ADAAF /* UserDetailsViewModel.swift */,
+			);
+			path = Details;
+			sourceTree = "<group>";
+		};
+		391E850121943678006ADAAF /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				391E850221943684006ADAAF /* Storyboards */,
+				391E84CB21942FED006ADAAF /* Assets.xcassets */,
+				391E84CD21942FED006ADAAF /* LaunchScreen.storyboard */,
+				391E84D021942FED006ADAAF /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		391E850221943684006ADAAF /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				391E84C821942FEC006ADAAF /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		391E850321943694006ADAAF /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				391E84E521943241006ADAAF /* Constants+Networking.swift */,
+				391E84F1219435B9006ADAAF /* Constants+ViewIdentifiers.swift */,
+				391E850D219438BB006ADAAF /* Constants+AlertMessages.swift */,
+				391E850F219438F9006ADAAF /* Constants+Numeric.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		391E850421943699006ADAAF /* Handlers */ = {
+			isa = PBXGroup;
+			children = (
+				391E84E7219432B3006ADAAF /* RealmHandler.swift */,
+			);
+			path = Handlers;
+			sourceTree = "<group>";
+		};
+		391E85052194369F006ADAAF /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				391E84F3219435F4006ADAAF /* ViewControllerInjector.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		391E850621943867006ADAAF /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				391E850921943879006ADAAF /* APIRequest.swift */,
+				391E850721943875006ADAAF /* APIRequestHandler.swift */,
+				391E850B2194387E006ADAAF /* NetworkStatus.swift */,
+				391E851121943B1C006ADAAF /* UsersHandler.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		39344501219520FC00974CE8 /* List */ = {
+			isa = PBXGroup;
+			children = (
+				393445022195210E00974CE8 /* UsersListViewController.swift */,
+				393445042195215300974CE8 /* UsersListViewModel.swift */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		4BFD60B75BDDD0719A9B4468 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F2F63306F40D9DEACD4B2B52 /* Pods_PeopleRoulette.framework */,
+				E0187F46001111C981F6B770 /* Pods_PeopleRoulette_PeopleRouletteTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CFE6E24BB7C13B2768E8090F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A8BB10ECB758BA7EA23DE7FE /* Pods-PeopleRoulette.debug.xcconfig */,
+				76C955C6947BADED57E9C9C9 /* Pods-PeopleRoulette.release.xcconfig */,
+				A701FBC437DAEAF6FED8A818 /* Pods-PeopleRoulette-PeopleRouletteTests.debug.xcconfig */,
+				59A0F534D1168164B19F47F1 /* Pods-PeopleRoulette-PeopleRouletteTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		391E84C021942FEC006ADAAF /* PeopleRoulette */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 391E84DE21942FED006ADAAF /* Build configuration list for PBXNativeTarget "PeopleRoulette" */;
+			buildPhases = (
+				4154AC568B7FA8DAB3AE60A9 /* [CP] Check Pods Manifest.lock */,
+				391E84BD21942FEC006ADAAF /* Sources */,
+				391E84BE21942FEC006ADAAF /* Frameworks */,
+				391E84BF21942FEC006ADAAF /* Resources */,
+				5313E16E05A18769D82FC3B7 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PeopleRoulette;
+			productName = PeopleRoulette;
+			productReference = 391E84C121942FEC006ADAAF /* PeopleRoulette.app */;
+			productType = "com.apple.product-type.application";
+		};
+		391E84D421942FED006ADAAF /* PeopleRouletteTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 391E84E121942FED006ADAAF /* Build configuration list for PBXNativeTarget "PeopleRouletteTests" */;
+			buildPhases = (
+				748096D971AB19302BC8BD44 /* [CP] Check Pods Manifest.lock */,
+				391E84D121942FED006ADAAF /* Sources */,
+				391E84D221942FED006ADAAF /* Frameworks */,
+				391E84D321942FED006ADAAF /* Resources */,
+				FBA1313F334DB2CD52B1875F /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				391E84D721942FED006ADAAF /* PBXTargetDependency */,
+			);
+			name = PeopleRouletteTests;
+			productName = PeopleRouletteTests;
+			productReference = 391E84D521942FED006ADAAF /* PeopleRouletteTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		391E84B921942FEC006ADAAF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1000;
+				LastUpgradeCheck = 1000;
+				ORGANIZATIONNAME = AppCoda;
+				TargetAttributes = {
+					391E84C021942FEC006ADAAF = {
+						CreatedOnToolsVersion = 10.0;
+					};
+					391E84D421942FED006ADAAF = {
+						CreatedOnToolsVersion = 10.0;
+						TestTargetID = 391E84C021942FEC006ADAAF;
+					};
+				};
+			};
+			buildConfigurationList = 391E84BC21942FEC006ADAAF /* Build configuration list for PBXProject "PeopleRoulette" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 391E84B821942FEC006ADAAF;
+			productRefGroup = 391E84C221942FEC006ADAAF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				391E84C021942FEC006ADAAF /* PeopleRoulette */,
+				391E84D421942FED006ADAAF /* PeopleRouletteTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		391E84BF21942FEC006ADAAF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				391E84CF21942FED006ADAAF /* LaunchScreen.storyboard in Resources */,
+				391E84CC21942FED006ADAAF /* Assets.xcassets in Resources */,
+				391E84CA21942FEC006ADAAF /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		391E84D321942FED006ADAAF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4154AC568B7FA8DAB3AE60A9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PeopleRoulette-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5313E16E05A18769D82FC3B7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-PeopleRoulette/Pods-PeopleRoulette-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper+Realm/ObjectMapper_Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapperAdditions/ObjectMapperAdditions.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Swinject/Swinject.framework",
+				"${BUILT_PRODUCTS_DIR}/SwinjectStoryboard/SwinjectStoryboard.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper_Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapperAdditions.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Swinject.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwinjectStoryboard.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PeopleRoulette/Pods-PeopleRoulette-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		748096D971AB19302BC8BD44 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PeopleRoulette-PeopleRouletteTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FBA1313F334DB2CD52B1875F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-PeopleRoulette-PeopleRouletteTests/Pods-PeopleRoulette-PeopleRouletteTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper+Realm/ObjectMapper_Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapperAdditions/ObjectMapperAdditions.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Swinject/Swinject.framework",
+				"${BUILT_PRODUCTS_DIR}/SwinjectStoryboard/SwinjectStoryboard.framework",
+				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
+				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper_Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapperAdditions.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Swinject.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwinjectStoryboard.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quick.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PeopleRoulette-PeopleRouletteTests/Pods-PeopleRoulette-PeopleRouletteTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		391E84BD21942FEC006ADAAF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				391E84E8219432B3006ADAAF /* RealmHandler.swift in Sources */,
+				391E851221943B1D006ADAAF /* UsersHandler.swift in Sources */,
+				391E84EB2194337A006ADAAF /* User.swift in Sources */,
+				391E84FE21943665006ADAAF /* UserDetailsViewController.swift in Sources */,
+				391E85002194366D006ADAAF /* UserDetailsViewModel.swift in Sources */,
+				393445032195210E00974CE8 /* UsersListViewController.swift in Sources */,
+				391E84F621943609006ADAAF /* DependencyAssembly.swift in Sources */,
+				391E850E219438BB006ADAAF /* Constants+AlertMessages.swift in Sources */,
+				391E850821943875006ADAAF /* APIRequestHandler.swift in Sources */,
+				391E8510219438F9006ADAAF /* Constants+Numeric.swift in Sources */,
+				391E84C721942FEC006ADAAF /* PeopleRouletteViewController.swift in Sources */,
+				391E84F2219435B9006ADAAF /* Constants+ViewIdentifiers.swift in Sources */,
+				391E84F4219435F4006ADAAF /* ViewControllerInjector.swift in Sources */,
+				393445052195215300974CE8 /* UsersListViewModel.swift in Sources */,
+				391E84C521942FEC006ADAAF /* AppDelegate.swift in Sources */,
+				391E84E621943241006ADAAF /* Constants+Networking.swift in Sources */,
+				391E84EE219433D1006ADAAF /* String+PR.swift in Sources */,
+				391E850C2194387E006ADAAF /* NetworkStatus.swift in Sources */,
+				391E84FC21943655006ADAAF /* PeopleRouletteViewModel.swift in Sources */,
+				391E850A21943879006ADAAF /* APIRequest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		391E84D121942FED006ADAAF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				391E84DA21942FED006ADAAF /* PeopleRouletteTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		391E84D721942FED006ADAAF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 391E84C021942FEC006ADAAF /* PeopleRoulette */;
+			targetProxy = 391E84D621942FED006ADAAF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		391E84C821942FEC006ADAAF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				391E84C921942FEC006ADAAF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		391E84CD21942FED006ADAAF /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				391E84CE21942FED006ADAAF /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		391E84DC21942FED006ADAAF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		391E84DD21942FED006ADAAF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		391E84DF21942FED006ADAAF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A8BB10ECB758BA7EA23DE7FE /* Pods-PeopleRoulette.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "$(SRCROOT)/PeopleRoulette/Resources/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.PeopleRoulette;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		391E84E021942FED006ADAAF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 76C955C6947BADED57E9C9C9 /* Pods-PeopleRoulette.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "$(SRCROOT)/PeopleRoulette/Resources/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.PeopleRoulette;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		391E84E221942FED006ADAAF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A701FBC437DAEAF6FED8A818 /* Pods-PeopleRoulette-PeopleRouletteTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = PeopleRouletteTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.PeopleRouletteTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PeopleRoulette.app/PeopleRoulette";
+			};
+			name = Debug;
+		};
+		391E84E321942FED006ADAAF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 59A0F534D1168164B19F47F1 /* Pods-PeopleRoulette-PeopleRouletteTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = PeopleRouletteTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.PeopleRouletteTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PeopleRoulette.app/PeopleRoulette";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		391E84BC21942FEC006ADAAF /* Build configuration list for PBXProject "PeopleRoulette" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				391E84DC21942FED006ADAAF /* Debug */,
+				391E84DD21942FED006ADAAF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		391E84DE21942FED006ADAAF /* Build configuration list for PBXNativeTarget "PeopleRoulette" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				391E84DF21942FED006ADAAF /* Debug */,
+				391E84E021942FED006ADAAF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		391E84E121942FED006ADAAF /* Build configuration list for PBXNativeTarget "PeopleRouletteTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				391E84E221942FED006ADAAF /* Debug */,
+				391E84E321942FED006ADAAF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 391E84B921942FEC006ADAAF /* Project object */;
+}

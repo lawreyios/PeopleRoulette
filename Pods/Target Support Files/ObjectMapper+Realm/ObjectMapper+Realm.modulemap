@@ -1,0 +1,6 @@
+framework module ObjectMapper_Realm {
+  umbrella header "ObjectMapper+Realm-umbrella.h"
+
+  export *
+  module * { export * }
+}

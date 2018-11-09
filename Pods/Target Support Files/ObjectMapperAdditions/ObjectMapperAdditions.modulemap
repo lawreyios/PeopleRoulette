@@ -1,0 +1,6 @@
+framework module ObjectMapperAdditions {
+  umbrella header "ObjectMapperAdditions-umbrella.h"
+
+  export *
+  module * { export * }
+}
