@@ -10,12 +10,18 @@ import UIKit
 
 class UserDetailsViewController: UIViewController {
     
+    @IBOutlet weak var userDetailsLabel: UILabel!
+        
     var userDetailsViewModel: UserDetailsViewModel!
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        setupUserInfo()
+    }
+    
+    private func setupUserInfo() {
+        userDetailsLabel.text = userDetailsViewModel.userInfo
     }
 
 }

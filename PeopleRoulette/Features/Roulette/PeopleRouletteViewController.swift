@@ -29,7 +29,7 @@ class PeopleRouletteViewController: UIViewController {
         return viewController
     }()
     
-    private var numberOfPeople = Int.zero
+    private var numberOfPeople = 1
 
     override func viewDidLoad() {
         super.viewDidLoad()

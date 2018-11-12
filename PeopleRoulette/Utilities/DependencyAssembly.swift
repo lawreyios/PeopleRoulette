@@ -22,6 +22,7 @@ extension SwinjectStoryboard {
         
         defaultContainer.storyboardInitCompleted(UsersListViewController.self) { resolver, controller in
             controller.usersListViewModel = resolver.resolve(UsersListViewModel.self)
+            controller.viewControllerInjector = resolver.resolve(ViewControllerInjecting.self)
         }
         
         defaultContainer.storyboardInitCompleted(UserDetailsViewController.self) { resolver, controller in

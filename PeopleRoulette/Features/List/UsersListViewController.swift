@@ -11,6 +11,12 @@ import UIKit
 class UsersListViewController: UITableViewController {
     
     var usersListViewModel: UsersListViewModel!
+    var viewControllerInjector: ViewControllerInjecting!
+    
+    lazy var userDetailsViewController: UserDetailsViewController = {
+        let viewController = viewControllerInjector.inject(viewController: ViewIdentifier.userDetailsViewController, in: Storyboard.main) as? UserDetailsViewController ?? UserDetailsViewController()
+        return viewController
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,7 +33,7 @@ class UsersListViewController: UITableViewController {
     }
     
     private func setupTableView() {
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "UserCell")
+        tableView.tableFooterView = UIView(frame: .zero)
     }
     
     private func setupNavigationBar() {
@@ -46,4 +52,9 @@ class UsersListViewController: UITableViewController {
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let user = usersListViewModel.getUser(for: indexPath.row)
+        userDetailsViewController.userDetailsViewModel.setupUserInfo(user)
+        navigationController?.pushViewController(userDetailsViewController, animated: true)
+    }
 }

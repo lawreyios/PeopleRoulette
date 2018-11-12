@@ -10,4 +10,13 @@ import Foundation
 
 class UserDetailsViewModel {
     
+    private var selectedUser: User!
+    
+    var userInfo: String {
+        return "\(selectedUser.name)\n\(selectedUser.username)\n\(selectedUser.email)"
+    }
+    
+    func setupUserInfo(_ user: User) {
+        self.selectedUser = user
+    }
 }
