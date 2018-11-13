@@ -19,7 +19,3 @@ class UsersListViewModelSpec: QuickSpec {
         // to be implemented
     }
 }
-
-class MockPeopleRoulette: PeopleRouletting {
-    // to be implemented
-}

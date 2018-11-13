@@ -6,7 +6,6 @@
 //  Copyright © 2018 AppCoda. All rights reserved.
 //
 
-import Foundation
 import SwinjectStoryboard
 import Swinject
 
@@ -20,11 +19,11 @@ extension SwinjectStoryboard {
         }
         
         defaultContainer.storyboardInitCompleted(UsersListViewController.self) { resolver, controller in
-            // to be implemented
+            controller.usersListViewModel = resolver.resolve(UsersListViewModel.self)
         }
         
         defaultContainer.storyboardInitCompleted(UserDetailsViewController.self) { resolver, controller in
-            // to be implemented
+            controller.userDetailsViewModel = resolver.resolve(UserDetailsViewModel.self)
         }
     }
     

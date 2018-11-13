@@ -3,6 +3,8 @@
 ## Introduction
 Do you want to build a car (Testable Architecture) that can run fast (less compile time), save petrol(repeated codes) and can be easily learnt(readable) & driven(picked up) by any licensed driver? Then you have come to the right place, in this tutorial, I am going to take you on a journey to build your **Swift-brand** car, using model **Swift 4.2**. 
 
+![](https://wallpapercave.com/wp/zoz3Q3c.jpg)
+
 ## Building a Testable Architecture
 As we advance to another level of our developer's journey, we will come to a point where we want to write more testable & reusable codes. Codes that can be easily understood without writing comments, and can be easily picked up by another developer. 
 
@@ -42,6 +44,8 @@ Once you have gotten your starter project, run `pod install` to ensure all frame
 ## People Roulette
 Today we will be building a very simple **People Roulette App** as we go through this tutorial. This app serves like a simple random generator to randomly select people. For example, everyone is tired and resting in the hotel, but you needed one guy to get some beer for a night party and no one wants to go, you could use this app to pick one unlucky guy. :P
 
+[Home.jpg][List.jpg][Details.jpg]
+
 ### Project Skeleon
 Open the project with Xcode and you should see a project structure as such:
 
@@ -64,6 +68,8 @@ First and foremost, we will need a list of users. Instead of hardcoding them, we
 > Let's think MVVM
 
 The **View** will notify its **ViewModel** to pull data using **Handler**, after the **Handler** receives data, it will update the **Model** which eventually will be retrieved and updated back to **ViewModel**, which will end of a UI update back to **View**.
+
+[Diagram.jpg]
 
 For simplicity, the **User** Model class has already been completed for you. Let's head over to **UsersHandler** class and start working from here. We have 2 protocols:
 
@@ -131,7 +137,7 @@ Now lets complete the handler class by implementing the rest:
 
 We will not talk more about RealmDB here, for more info you could read their docs [here](https://realm.io/docs/swift/latest/). 
 
-### Unit Testing UsersHandler (Building the Rolulette)
+### Unit Testing UsersHandler 
 Here, we are going to write on first test for making a network call to `Get Users`. Open up `UsersHandlerSpec.swift` and we are going to start writing our test implementation in `spec()`. For more info about using **Quick & Nimble** please go [here](https://github.com/Quick/Nimble). 
 
 Since its network related, we would not want to test the real network call as sometimes server might fail, or network might be unstable, so we are going to leverage on the powerful method of [Mock](https://en.wikipedia.org/wiki/Mock_object). By **Mocking**, we can control cases such that the:
@@ -191,7 +197,7 @@ Wow! thats a huge amount of effort put in just to create a method for a network 
 
 So we are going to now move up one level, to use `UsersHandler` in our `PeopleRouletteViewModel`.
 
-## Implement PeopleRouletteViewModel (Building the Roulette)
+## Implement PeopleRouletteViewModel
 Remember that `ViewModel` retrieves data from `Model` and prepare them to be used in `View`. Go ahead and put in these codes:
 
 ```
@@ -234,7 +240,7 @@ class PeopleRouletteViewModel {
 2. Here we are using `maxCount` and `minCount` to determine the lower and upper bound of our `UIPicker`.
 3. This function is similar to `UsersHandler`, except that we no longer pass users to `View`, we only inform the `View` if the call is successful.
 
-## Unit Testing PeopleRouletteViewModel (Building the Roulette)
+## Unit Testing PeopleRouletteViewModel
 Open up `PeopleRouletteViewModelSpec.swift` and implement these codes:
 
 ```
@@ -323,7 +329,9 @@ class MockUsersRetriever: UsersRetrieving {
 
 > Now run the test by using CMD+U or Product -> Test and you should see all your test cases passed!
 
-## Implementing PeopleRouletteViewController (Building the Roulette)
+## Implementing PeopleRouletteViewController
+![](http://clipart-library.com/image_gallery/325131.png)
+
 Give yourself a big pat on your back! We are almost there, what we have just did is actually the most tedious part of the tutorial, I encourage you to repeat the previous steps by re-downloading the starter project and do it without looking at this tutorial. 
 
 Now we are going to display the prepared data to users on the app. Add these missing codes which we just implemented in the `ViewModel` layer to use it now in the `View`:
@@ -384,6 +392,8 @@ and head over to `registerViewModels` to update `PeopleRouletteViewModel` with
 ```
 Tadaa! We are now good to go. Just like a car needing a key to start the engine, all these dependencies help us to kick start the car. 
 ###Run the app now and you should see your app running and you can choose number of people!
+
+[Home.jpg]
 
 ##Implement RouletteHandler
 I am going to go a little faster from here, as it will be the same ritual. 
@@ -478,6 +488,262 @@ class RouletteHandlerSpec: QuickSpec {
 2. We need to test that it also support more than 1 user.
 3. We need to test that all values are unique by testing against getting all users.
 
+##Implement Navigation
+Before we go on to use our `PeopleRouletting`, we need to navigate user to the next screen where the Roulette happens, and the list of lucky winners are displayed.
+
+Let's head back to `PeopleRouletteViewController` and add in this line of code:
+
+```
+    var peopleRouletteViewModel: PeopleRouletteViewModel!
+    var viewControllerInjector: ViewControllerInjecting!
+```
+`ViewControllerInjector` already exists in the codebase, its main job is to do all the heavy work of injecting viewControllers for you. Dont forget to head over to `Dependency Assembly` and inject in too. `controller.viewControllerInjector = resolver.resolve(ViewControllerInjecting.self)`
+
+Head back to the viewController and add `UsersListViewController` just above `numberOfPeople` declaration:
+
+```
+    lazy var usersListViewController: UsersListViewController = {
+        let viewController = viewControllerInjector.inject(viewController: ViewIdentifier.usersListViewController, in: Storyboard.main) as? UsersListViewController ?? UsersListViewController()
+        return viewController
+    }()
+```
+We perform a lazy load of the viewController here to ensure injection only happens once. In such case, `viewDidLoad` will only be called once as well.
+
+Now implement our `roulette` action:
+
+```
+    @IBAction func roulette(_ sender: UIButton) {
+        usersListViewController.usersListViewModel.setup(with: numberOfPeople)
+        navigationController?.pushViewController(usersListViewController, animated: true)
+    }
+```  
+###Are you ready to navigate? Run Test and then the app to ensure everything are in tact before moving on!
+
+>You should be able to select number of people, click of Roulette Wheel and navigate to next screen. But nothing is showing yet.
+
+##Implement UsersListViewModel
+This is where we will use `PeopleRoulette` to populate our list view. 
+
+![](http://canadiancitizenshipchallenge.ca/sites/default/files/buttons/take_the_challenge.png)
+> Inject `PeopleRouletting` in.
+
+Once you are done with the challenge, use it in `setup` like this:
+
+```
+    func setup(with numberOfPeople: Int) {
+        selectedPeople = peopleRoulette.getRouletteResults(for: numberOfPeople)
+        
+        cellViewModels.removeAll()
+        
+        for person in selectedPeople {
+            cellViewModels.append(UsersListItemCellViewModel(user: person))
+        }
+    }
+```
+Very simply, we randomly pick out the selectedPeople objects, then prepare one cellViewModel per object.
+
+##Unit Testing UsersListViewModel
+Head over to `UsersListViewModelSpec` and fill them up:
+
+```
+class UsersListViewModelSpec: QuickSpec {
+    override func spec() {
+        let viewModel = UsersListViewModel()
+        viewModel.peopleRoulette = MockPeopleRoulette()
+        
+        describe("Given Roulette results") {
+            beforeEach {
+                viewModel.setup(with: 3)
+            }
+            
+            it("should show the correct number of selected people in the list") {
+                expect(viewModel.numberOfRows).to(equal(3))
+            }
+            
+            it("should show the correct person in each row") {
+                expect(viewModel.getUser(for: 0).name).to(equal("User 1"))
+                expect(viewModel.getUser(for: 0).company?.name).to(equal("Company 1"))
+            }
+        }
+    }
+}
+
+class MockPeopleRoulette: PeopleRouletting {
+    func getRouletteResults(for numberOfPeople: Int) -> [User] {
+        return MockUsers.data
+    }
+}
+```
+Here we provide the `PeopleRoulette` object with some data, then test that with data available, it should 
+
+1. Calculate the correct number of rows.
+2. Get the correct user data from each row.
+
+##Implement UsersListItemCellViewModel
+
+Head over to `UsersListItemCellViewModel` to implement our codes:
+
+```
+// 1
+protocol UsersListItemRepresenting {
+    var name: String { get }
+    var company: String { get }
+}
+
+// 2
+class UsersListItemCellViewModel: UsersListItemRepresenting {
+    
+    var name = String.empty
+    var company = String.empty
+    
+    init(user: User) {
+        name = user.name
+        company = user.company?.name ?? .empty
+    }
+}
+```
+
+In cellViewModel, we only want data that is neccessary to be shown to user, not the entire model should be loaded unless neccessary.
+
+##Unit Testing UsersListItemCellViewModel
+
+```
+class UsersListItemCellViewModelSpec: QuickSpec {
+    override func spec() {
+        let cellViewModel = UsersListItemCellViewModel(user: MockUsers.data.first!)
+        
+        describe("Given a user list item") {
+            it("should display user's name") {
+                expect(cellViewModel.name).to(equal("User 1"))
+            }
+            
+            it("should display user's company") {
+                expect(cellViewModel.company).to(equal("Company 1"))
+            }
+        }
+    }
+}
+```
+Given a cellViewModel, test that it populates the right data.
+
+##Implement UsersListViewController
+Now fill up the `tableView` methods in the viewController:
+
+```
+// 1
+override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    return usersListViewModel.numberOfRows
+}
+
+// 2
+override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    let cellViewModel = usersListViewModel.getCellViewModel(for: indexPath.row)
+    return populateUsersListItemCell(with: cellViewModel, at: indexPath) ?? UITableViewCell()
+}
+
+// 3
+private func populateUsersListItemCell(with viewModel: UsersListItemRepresenting, at indexPath: IndexPath) -> UsersListItemCell? {
+    if let cell = tableView.dequeueReusableCell(withIdentifier: "UsersListItemCell", for: indexPath) as? UsersListItemCell {
+        let cellViewModel = usersListViewModel.getCellViewModel(for: indexPath.row)
+        cell.configure(with: cellViewModel.name, and: cellViewModel.company)
+        return cell
+    }
+    
+    return nil
+}
+```   
+1. First, we use the viewModel to render the correct number of rows.
+2. Then, we get the cellViewModel of the row, and render its cell.
+3. Cell creation is happening here where the cellViewModel is used to mapped data to cell.
+
+![](http://canadiancitizenshipchallenge.ca/sites/default/files/buttons/take_the_challenge.png)
+>Running the app now crashes the app, it seems like a DI is missing, can you resolve it?
+
+###Now run the test and the app, choose people and you should see a list of selected unique people! Hurray!
+
+[List.jpg]
+
+##Implement UserDetailsViewModel
+The last step is to allow user to view each person's details when tap on it.
+Go ahead and implement this view model:
+
+```
+private var selectedUser: User!
+    
+var userInfo: String {
+    return "\(selectedUser.name)\n\(selectedUser.username)\n\(selectedUser.email)"
+}
+    
+func setupUserInfo(_ user: User) {
+    self.selectedUser = user
+}
+```    
+##Unit Testing UserDetailsViewModel
+In `UserDetailsViewModelSpec`:
+
+```
+class UserDetailsViewModelSpec: QuickSpec {
+    override func spec() {
+        let viewModel = UserDetailsViewModel()
+        
+        describe("Given user details") {
+            beforeEach {
+                viewModel.setupUserInfo(MockUsers.data.first!)
+            }
+            
+            it("should display user info") {
+                expect(viewModel.userInfo).to(equal("User 1\nUsername 1\nEmail 1"))
+            }
+        }
+    }
+}
+```
+We are testing here that the details of the user are displayed correctly and in the right format.
+
+##Implement Navigation
+![](http://canadiancitizenshipchallenge.ca/sites/default/files/buttons/take_the_challenge.png)
+
+Challenge yourself now. Add in `viewControllerInjector` and inject in `UserDetailsViewController` using lazy loading. Then, implement this in `tableView` delegate to navigate to the details page:
+
+```
+override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    let user = usersListViewModel.getUser(for: indexPath.row)
+    userDetailsViewController.userDetailsViewModel.setupUserInfo(user)
+    navigationController?.pushViewController(userDetailsViewController, animated: true)
+}
+```
+
+##Implement UserDetailsViewController
+Populate `setupUserInfo` function and we are done!
+
+```
+private func setupUserInfo() {
+    userDetailsLabel.text = userDetailsViewModel.userInfo
+}
+```
+
+![](http://canadiancitizenshipchallenge.ca/sites/default/files/buttons/take_the_challenge.png)
+>Again, the app crashes because of missing dependencies. Go ahead and solve them!
+
+###Now run the test & app and you should see be able to view user details with 18 test cases passed!
+
+[Details.jpg]
+
+##You are a Champion!
+![](https://png.pngtree.com/element_origin_min_pic/17/06/22/5812e6495eee684a6441c5042c2e14cd.jpg)
+This is one of the toughest tutorials I have written and please provide your feedback so I can be better at it. I have mainly touched on the advanced methods of coding in swift. 
+
+1. Using MVVM Design Pattern
+2. Using Dependency Injection
+3. Using Protocol Oriented Programming
+4. Unit Testing
+
+In the real world, it is not ideal to inject everything as you may end up having too many objects that may not be needed. Hence, use it when neccessary. This tutorial applies mainly for bigger apps where you are working with a larger team and work can be distributed to multiple teammates. I hope you have learnt something and do continue to try this tutorial again and again to get the hang of it!
+
+You can download the complete project [here](https://github.com/lawreyios/PeopleRoulette/tree/finished).
+
+
+    
 
 
     
