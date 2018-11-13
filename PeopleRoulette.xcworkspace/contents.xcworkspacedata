@@ -2,7 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:PeopleRoulette.xcodeproj">
+      location = "group:/Users/tanjunha/Workspace/PeopleRoulette/PeopleRoulette-finished.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">

@@ -56,13 +56,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		391E84C121942FEC006ADAAF /* PeopleRoulette.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PeopleRoulette.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		391E84C121942FEC006ADAAF /* PeopleRoulette-finished.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PeopleRoulette-finished.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		391E84C421942FEC006ADAAF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		391E84C621942FEC006ADAAF /* PeopleRouletteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleRouletteViewController.swift; sourceTree = "<group>"; };
 		391E84CB21942FED006ADAAF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		391E84CE21942FED006ADAAF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		391E84D021942FED006ADAAF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		391E84D521942FED006ADAAF /* PeopleRouletteTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PeopleRouletteTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		391E84D521942FED006ADAAF /* PeopleRoulette-finishedTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "PeopleRoulette-finishedTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		391E84DB21942FED006ADAAF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		391E84E521943241006ADAAF /* Constants+Networking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Constants+Networking.swift"; sourceTree = "<group>"; };
 		391E84E7219432B3006ADAAF /* RealmHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmHandler.swift; sourceTree = "<group>"; };
@@ -136,8 +136,8 @@
 		391E84C221942FEC006ADAAF /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				391E84C121942FEC006ADAAF /* PeopleRoulette.app */,
-				391E84D521942FED006ADAAF /* PeopleRouletteTests.xctest */,
+				391E84C121942FEC006ADAAF /* PeopleRoulette-finished.app */,
+				391E84D521942FED006ADAAF /* PeopleRoulette-finishedTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -383,9 +383,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		391E84C021942FEC006ADAAF /* PeopleRoulette */ = {
+		391E84C021942FEC006ADAAF /* PeopleRoulette-finished */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 391E84DE21942FED006ADAAF /* Build configuration list for PBXNativeTarget "PeopleRoulette" */;
+			buildConfigurationList = 391E84DE21942FED006ADAAF /* Build configuration list for PBXNativeTarget "PeopleRoulette-finished" */;
 			buildPhases = (
 				4154AC568B7FA8DAB3AE60A9 /* [CP] Check Pods Manifest.lock */,
 				391E84BD21942FEC006ADAAF /* Sources */,
@@ -397,14 +397,14 @@
 			);
 			dependencies = (
 			);
-			name = PeopleRoulette;
+			name = "PeopleRoulette-finished";
 			productName = PeopleRoulette;
-			productReference = 391E84C121942FEC006ADAAF /* PeopleRoulette.app */;
+			productReference = 391E84C121942FEC006ADAAF /* PeopleRoulette-finished.app */;
 			productType = "com.apple.product-type.application";
 		};
-		391E84D421942FED006ADAAF /* PeopleRouletteTests */ = {
+		391E84D421942FED006ADAAF /* PeopleRoulette-finishedTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 391E84E121942FED006ADAAF /* Build configuration list for PBXNativeTarget "PeopleRouletteTests" */;
+			buildConfigurationList = 391E84E121942FED006ADAAF /* Build configuration list for PBXNativeTarget "PeopleRoulette-finishedTests" */;
 			buildPhases = (
 				748096D971AB19302BC8BD44 /* [CP] Check Pods Manifest.lock */,
 				391E84D121942FED006ADAAF /* Sources */,
@@ -417,9 +417,9 @@
 			dependencies = (
 				391E84D721942FED006ADAAF /* PBXTargetDependency */,
 			);
-			name = PeopleRouletteTests;
+			name = "PeopleRoulette-finishedTests";
 			productName = PeopleRouletteTests;
-			productReference = 391E84D521942FED006ADAAF /* PeopleRouletteTests.xctest */;
+			productReference = 391E84D521942FED006ADAAF /* PeopleRoulette-finishedTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -442,7 +442,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 391E84BC21942FEC006ADAAF /* Build configuration list for PBXProject "PeopleRoulette" */;
+			buildConfigurationList = 391E84BC21942FEC006ADAAF /* Build configuration list for PBXProject "PeopleRoulette-finished" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -455,8 +455,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				391E84C021942FEC006ADAAF /* PeopleRoulette */,
-				391E84D421942FED006ADAAF /* PeopleRouletteTests */,
+				391E84C021942FEC006ADAAF /* PeopleRoulette-finished */,
+				391E84D421942FED006ADAAF /* PeopleRoulette-finishedTests */,
 			);
 		};
 /* End PBXProject section */
@@ -659,7 +659,7 @@
 /* Begin PBXTargetDependency section */
 		391E84D721942FED006ADAAF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 391E84C021942FEC006ADAAF /* PeopleRoulette */;
+			target = 391E84C021942FEC006ADAAF /* PeopleRoulette-finished */;
 			targetProxy = 391E84D621942FED006ADAAF /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -847,7 +847,7 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PeopleRoulette.app/PeopleRoulette";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PeopleRoulette-finished.app/PeopleRoulette-finished";
 			};
 			name = Debug;
 		};
@@ -869,14 +869,14 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PeopleRoulette.app/PeopleRoulette";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PeopleRoulette-finished.app/PeopleRoulette-finished";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		391E84BC21942FEC006ADAAF /* Build configuration list for PBXProject "PeopleRoulette" */ = {
+		391E84BC21942FEC006ADAAF /* Build configuration list for PBXProject "PeopleRoulette-finished" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				391E84DC21942FED006ADAAF /* Debug */,
@@ -885,7 +885,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		391E84DE21942FED006ADAAF /* Build configuration list for PBXNativeTarget "PeopleRoulette" */ = {
+		391E84DE21942FED006ADAAF /* Build configuration list for PBXNativeTarget "PeopleRoulette-finished" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				391E84DF21942FED006ADAAF /* Debug */,
@@ -894,7 +894,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		391E84E121942FED006ADAAF /* Build configuration list for PBXNativeTarget "PeopleRouletteTests" */ = {
+		391E84E121942FED006ADAAF /* Build configuration list for PBXNativeTarget "PeopleRoulette-finishedTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				391E84E221942FED006ADAAF /* Debug */,
