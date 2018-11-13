@@ -39,8 +39,11 @@
 		39DF46AC219A661000A1AE0E /* UsersListItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39DF46AA219A661000A1AE0E /* UsersListItemCell.swift */; };
 		39DF46AE219A6A5000A1AE0E /* UsersListItemCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39DF46AD219A6A4F00A1AE0E /* UsersListItemCellViewModel.swift */; };
 		39DF46B0219A6D1700A1AE0E /* UsersListItemCellViewModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39DF46AF219A6D1700A1AE0E /* UsersListItemCellViewModelSpec.swift */; };
+		39DF46B3219ABCBB00A1AE0E /* UsersHandlerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39DF46B2219ABCBB00A1AE0E /* UsersHandlerSpec.swift */; };
+		4D745932719D98423F69B66C /* Pods_PeopleRoulette_starter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5B151745BF2ADEE3CECFF9A /* Pods_PeopleRoulette_starter.framework */; };
 		50D8D7D8BFD604F1A1C8E904 /* Pods_PeopleRoulette.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2F63306F40D9DEACD4B2B52 /* Pods_PeopleRoulette.framework */; };
 		514AB7F0CD1E4009E4C446D3 /* Pods_PeopleRoulette_PeopleRouletteTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0187F46001111C981F6B770 /* Pods_PeopleRoulette_PeopleRouletteTests.framework */; };
+		65C11E17827A81330A9B8B20 /* Pods_PeopleRoulette_starter_PeopleRoulette_starterTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE0ED83AE361E2ED52DAA271 /* Pods_PeopleRoulette_starter_PeopleRoulette_starterTests.framework */; };
 		AB1FFFED2195EE17000D1120 /* RouletteHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB1FFFEC2195EE17000D1120 /* RouletteHandler.swift */; };
 		AB1FFFEF2195F161000D1120 /* Array+Darwin.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB1FFFEE2195F161000D1120 /* Array+Darwin.swift */; };
 /* End PBXBuildFile section */
@@ -56,13 +59,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		391E84C121942FEC006ADAAF /* PeopleRoulette.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PeopleRoulette.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		391E84C121942FEC006ADAAF /* PeopleRoulette-starter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PeopleRoulette-starter.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		391E84C421942FEC006ADAAF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		391E84C621942FEC006ADAAF /* PeopleRouletteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleRouletteViewController.swift; sourceTree = "<group>"; };
 		391E84CB21942FED006ADAAF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		391E84CE21942FED006ADAAF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		391E84D021942FED006ADAAF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		391E84D521942FED006ADAAF /* PeopleRouletteTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PeopleRouletteTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		391E84D521942FED006ADAAF /* PeopleRoulette-starterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "PeopleRoulette-starterTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		391E84DB21942FED006ADAAF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		391E84E521943241006ADAAF /* Constants+Networking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Constants+Networking.swift"; sourceTree = "<group>"; };
 		391E84E7219432B3006ADAAF /* RealmHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmHandler.swift; sourceTree = "<group>"; };
@@ -92,12 +95,19 @@
 		39DF46AA219A661000A1AE0E /* UsersListItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersListItemCell.swift; sourceTree = "<group>"; };
 		39DF46AD219A6A4F00A1AE0E /* UsersListItemCellViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersListItemCellViewModel.swift; sourceTree = "<group>"; };
 		39DF46AF219A6D1700A1AE0E /* UsersListItemCellViewModelSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersListItemCellViewModelSpec.swift; sourceTree = "<group>"; };
+		39DF46B2219ABCBB00A1AE0E /* UsersHandlerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersHandlerSpec.swift; sourceTree = "<group>"; };
 		59A0F534D1168164B19F47F1 /* Pods-PeopleRoulette-PeopleRouletteTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PeopleRoulette-PeopleRouletteTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PeopleRoulette-PeopleRouletteTests/Pods-PeopleRoulette-PeopleRouletteTests.release.xcconfig"; sourceTree = "<group>"; };
 		76C955C6947BADED57E9C9C9 /* Pods-PeopleRoulette.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PeopleRoulette.release.xcconfig"; path = "Pods/Target Support Files/Pods-PeopleRoulette/Pods-PeopleRoulette.release.xcconfig"; sourceTree = "<group>"; };
+		8FCEE182F5ECA6A9C2BF190D /* Pods-PeopleRoulette-starter-PeopleRoulette-starterTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PeopleRoulette-starter-PeopleRoulette-starterTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PeopleRoulette-starter-PeopleRoulette-starterTests/Pods-PeopleRoulette-starter-PeopleRoulette-starterTests.debug.xcconfig"; sourceTree = "<group>"; };
+		960774839F9F88FE6195AC68 /* Pods-PeopleRoulette-starter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PeopleRoulette-starter.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PeopleRoulette-starter/Pods-PeopleRoulette-starter.debug.xcconfig"; sourceTree = "<group>"; };
+		A397215F6F002A9AB150E7EB /* Pods-PeopleRoulette-starter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PeopleRoulette-starter.release.xcconfig"; path = "Pods/Target Support Files/Pods-PeopleRoulette-starter/Pods-PeopleRoulette-starter.release.xcconfig"; sourceTree = "<group>"; };
+		A5A352C9B9F144381FAA36BE /* Pods-PeopleRoulette-starter-PeopleRoulette-starterTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PeopleRoulette-starter-PeopleRoulette-starterTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PeopleRoulette-starter-PeopleRoulette-starterTests/Pods-PeopleRoulette-starter-PeopleRoulette-starterTests.release.xcconfig"; sourceTree = "<group>"; };
 		A701FBC437DAEAF6FED8A818 /* Pods-PeopleRoulette-PeopleRouletteTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PeopleRoulette-PeopleRouletteTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PeopleRoulette-PeopleRouletteTests/Pods-PeopleRoulette-PeopleRouletteTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A8BB10ECB758BA7EA23DE7FE /* Pods-PeopleRoulette.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PeopleRoulette.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PeopleRoulette/Pods-PeopleRoulette.debug.xcconfig"; sourceTree = "<group>"; };
 		AB1FFFEC2195EE17000D1120 /* RouletteHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouletteHandler.swift; sourceTree = "<group>"; };
 		AB1FFFEE2195F161000D1120 /* Array+Darwin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Darwin.swift"; sourceTree = "<group>"; };
+		B5B151745BF2ADEE3CECFF9A /* Pods_PeopleRoulette_starter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PeopleRoulette_starter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE0ED83AE361E2ED52DAA271 /* Pods_PeopleRoulette_starter_PeopleRoulette_starterTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PeopleRoulette_starter_PeopleRoulette_starterTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0187F46001111C981F6B770 /* Pods_PeopleRoulette_PeopleRouletteTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PeopleRoulette_PeopleRouletteTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2F63306F40D9DEACD4B2B52 /* Pods_PeopleRoulette.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PeopleRoulette.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -108,6 +118,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				50D8D7D8BFD604F1A1C8E904 /* Pods_PeopleRoulette.framework in Frameworks */,
+				4D745932719D98423F69B66C /* Pods_PeopleRoulette_starter.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -116,6 +127,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				514AB7F0CD1E4009E4C446D3 /* Pods_PeopleRoulette_PeopleRouletteTests.framework in Frameworks */,
+				65C11E17827A81330A9B8B20 /* Pods_PeopleRoulette_starter_PeopleRoulette_starterTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,8 +148,8 @@
 		391E84C221942FEC006ADAAF /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				391E84C121942FEC006ADAAF /* PeopleRoulette.app */,
-				391E84D521942FED006ADAAF /* PeopleRouletteTests.xctest */,
+				391E84C121942FEC006ADAAF /* PeopleRoulette-starter.app */,
+				391E84D521942FED006ADAAF /* PeopleRoulette-starterTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -337,6 +349,7 @@
 			isa = PBXGroup;
 			children = (
 				39231AAB21997B7A009D05C2 /* RouletteHandlerSpec.swift */,
+				39DF46B2219ABCBB00A1AE0E /* UsersHandlerSpec.swift */,
 			);
 			path = Handlers;
 			sourceTree = "<group>";
@@ -365,6 +378,8 @@
 			children = (
 				F2F63306F40D9DEACD4B2B52 /* Pods_PeopleRoulette.framework */,
 				E0187F46001111C981F6B770 /* Pods_PeopleRoulette_PeopleRouletteTests.framework */,
+				B5B151745BF2ADEE3CECFF9A /* Pods_PeopleRoulette_starter.framework */,
+				CE0ED83AE361E2ED52DAA271 /* Pods_PeopleRoulette_starter_PeopleRoulette_starterTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -376,6 +391,10 @@
 				76C955C6947BADED57E9C9C9 /* Pods-PeopleRoulette.release.xcconfig */,
 				A701FBC437DAEAF6FED8A818 /* Pods-PeopleRoulette-PeopleRouletteTests.debug.xcconfig */,
 				59A0F534D1168164B19F47F1 /* Pods-PeopleRoulette-PeopleRouletteTests.release.xcconfig */,
+				960774839F9F88FE6195AC68 /* Pods-PeopleRoulette-starter.debug.xcconfig */,
+				A397215F6F002A9AB150E7EB /* Pods-PeopleRoulette-starter.release.xcconfig */,
+				8FCEE182F5ECA6A9C2BF190D /* Pods-PeopleRoulette-starter-PeopleRoulette-starterTests.debug.xcconfig */,
+				A5A352C9B9F144381FAA36BE /* Pods-PeopleRoulette-starter-PeopleRoulette-starterTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -383,9 +402,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		391E84C021942FEC006ADAAF /* PeopleRoulette */ = {
+		391E84C021942FEC006ADAAF /* PeopleRoulette-starter */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 391E84DE21942FED006ADAAF /* Build configuration list for PBXNativeTarget "PeopleRoulette" */;
+			buildConfigurationList = 391E84DE21942FED006ADAAF /* Build configuration list for PBXNativeTarget "PeopleRoulette-starter" */;
 			buildPhases = (
 				4154AC568B7FA8DAB3AE60A9 /* [CP] Check Pods Manifest.lock */,
 				391E84BD21942FEC006ADAAF /* Sources */,
@@ -397,14 +416,14 @@
 			);
 			dependencies = (
 			);
-			name = PeopleRoulette;
+			name = "PeopleRoulette-starter";
 			productName = PeopleRoulette;
-			productReference = 391E84C121942FEC006ADAAF /* PeopleRoulette.app */;
+			productReference = 391E84C121942FEC006ADAAF /* PeopleRoulette-starter.app */;
 			productType = "com.apple.product-type.application";
 		};
-		391E84D421942FED006ADAAF /* PeopleRouletteTests */ = {
+		391E84D421942FED006ADAAF /* PeopleRoulette-starterTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 391E84E121942FED006ADAAF /* Build configuration list for PBXNativeTarget "PeopleRouletteTests" */;
+			buildConfigurationList = 391E84E121942FED006ADAAF /* Build configuration list for PBXNativeTarget "PeopleRoulette-starterTests" */;
 			buildPhases = (
 				748096D971AB19302BC8BD44 /* [CP] Check Pods Manifest.lock */,
 				391E84D121942FED006ADAAF /* Sources */,
@@ -417,9 +436,9 @@
 			dependencies = (
 				391E84D721942FED006ADAAF /* PBXTargetDependency */,
 			);
-			name = PeopleRouletteTests;
+			name = "PeopleRoulette-starterTests";
 			productName = PeopleRouletteTests;
-			productReference = 391E84D521942FED006ADAAF /* PeopleRouletteTests.xctest */;
+			productReference = 391E84D521942FED006ADAAF /* PeopleRoulette-starterTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -442,7 +461,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 391E84BC21942FEC006ADAAF /* Build configuration list for PBXProject "PeopleRoulette" */;
+			buildConfigurationList = 391E84BC21942FEC006ADAAF /* Build configuration list for PBXProject "PeopleRoulette-starter" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -455,8 +474,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				391E84C021942FEC006ADAAF /* PeopleRoulette */,
-				391E84D421942FED006ADAAF /* PeopleRouletteTests */,
+				391E84C021942FEC006ADAAF /* PeopleRoulette-starter */,
+				391E84D421942FED006ADAAF /* PeopleRoulette-starterTests */,
 			);
 		};
 /* End PBXProject section */
@@ -497,7 +516,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-PeopleRoulette-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-PeopleRoulette-starter-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -512,7 +531,7 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-PeopleRoulette/Pods-PeopleRoulette-frameworks.sh",
+				"${SRCROOT}/Pods/Target Support Files/Pods-PeopleRoulette-starter/Pods-PeopleRoulette-starter-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
@@ -539,7 +558,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PeopleRoulette/Pods-PeopleRoulette-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PeopleRoulette-starter/Pods-PeopleRoulette-starter-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		748096D971AB19302BC8BD44 /* [CP] Check Pods Manifest.lock */ = {
@@ -557,7 +576,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-PeopleRoulette-PeopleRouletteTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-PeopleRoulette-starter-PeopleRoulette-starterTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -572,7 +591,7 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-PeopleRoulette-PeopleRouletteTests/Pods-PeopleRoulette-PeopleRouletteTests-frameworks.sh",
+				"${SRCROOT}/Pods/Target Support Files/Pods-PeopleRoulette-starter-PeopleRoulette-starterTests/Pods-PeopleRoulette-starter-PeopleRoulette-starterTests-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
@@ -603,7 +622,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PeopleRoulette-PeopleRouletteTests/Pods-PeopleRoulette-PeopleRouletteTests-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PeopleRoulette-starter-PeopleRoulette-starterTests/Pods-PeopleRoulette-starter-PeopleRoulette-starterTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -633,6 +652,7 @@
 				393445052195215300974CE8 /* UsersListViewModel.swift in Sources */,
 				391E84C521942FEC006ADAAF /* AppDelegate.swift in Sources */,
 				391E84E621943241006ADAAF /* Constants+Networking.swift in Sources */,
+				39DF46B3219ABCBB00A1AE0E /* UsersHandlerSpec.swift in Sources */,
 				391E84EE219433D1006ADAAF /* String+PR.swift in Sources */,
 				391E850C2194387E006ADAAF /* NetworkStatus.swift in Sources */,
 				391E84FC21943655006ADAAF /* PeopleRouletteViewModel.swift in Sources */,
@@ -659,7 +679,7 @@
 /* Begin PBXTargetDependency section */
 		391E84D721942FED006ADAAF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 391E84C021942FEC006ADAAF /* PeopleRoulette */;
+			target = 391E84C021942FEC006ADAAF /* PeopleRoulette-starter */;
 			targetProxy = 391E84D621942FED006ADAAF /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -794,7 +814,7 @@
 		};
 		391E84DF21942FED006ADAAF /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A8BB10ECB758BA7EA23DE7FE /* Pods-PeopleRoulette.debug.xcconfig */;
+			baseConfigurationReference = 960774839F9F88FE6195AC68 /* Pods-PeopleRoulette-starter.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -812,7 +832,7 @@
 		};
 		391E84E021942FED006ADAAF /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 76C955C6947BADED57E9C9C9 /* Pods-PeopleRoulette.release.xcconfig */;
+			baseConfigurationReference = A397215F6F002A9AB150E7EB /* Pods-PeopleRoulette-starter.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -830,7 +850,7 @@
 		};
 		391E84E221942FED006ADAAF /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A701FBC437DAEAF6FED8A818 /* Pods-PeopleRoulette-PeopleRouletteTests.debug.xcconfig */;
+			baseConfigurationReference = 8FCEE182F5ECA6A9C2BF190D /* Pods-PeopleRoulette-starter-PeopleRoulette-starterTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -847,13 +867,13 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PeopleRoulette.app/PeopleRoulette";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PeopleRoulette-starter.app/PeopleRoulette-starter";
 			};
 			name = Debug;
 		};
 		391E84E321942FED006ADAAF /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 59A0F534D1168164B19F47F1 /* Pods-PeopleRoulette-PeopleRouletteTests.release.xcconfig */;
+			baseConfigurationReference = A5A352C9B9F144381FAA36BE /* Pods-PeopleRoulette-starter-PeopleRoulette-starterTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -869,14 +889,14 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PeopleRoulette.app/PeopleRoulette";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PeopleRoulette-starter.app/PeopleRoulette-starter";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		391E84BC21942FEC006ADAAF /* Build configuration list for PBXProject "PeopleRoulette" */ = {
+		391E84BC21942FEC006ADAAF /* Build configuration list for PBXProject "PeopleRoulette-starter" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				391E84DC21942FED006ADAAF /* Debug */,
@@ -885,7 +905,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		391E84DE21942FED006ADAAF /* Build configuration list for PBXNativeTarget "PeopleRoulette" */ = {
+		391E84DE21942FED006ADAAF /* Build configuration list for PBXNativeTarget "PeopleRoulette-starter" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				391E84DF21942FED006ADAAF /* Debug */,
@@ -894,7 +914,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		391E84E121942FED006ADAAF /* Build configuration list for PBXNativeTarget "PeopleRouletteTests" */ = {
+		391E84E121942FED006ADAAF /* Build configuration list for PBXNativeTarget "PeopleRoulette-starterTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				391E84E221942FED006ADAAF /* Debug */,

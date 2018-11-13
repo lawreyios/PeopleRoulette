@@ -46,14 +46,14 @@
 			<key>orderHint</key>
 			<integer>5</integer>
 		</dict>
-		<key>Pods-PeopleRoulette-PeopleRouletteTests.xcscheme</key>
+		<key>Pods-PeopleRoulette-starter-PeopleRoulette-starterTests.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
 			<integer>7</integer>
 		</dict>
-		<key>Pods-PeopleRoulette.xcscheme</key>
+		<key>Pods-PeopleRoulette-starter.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
