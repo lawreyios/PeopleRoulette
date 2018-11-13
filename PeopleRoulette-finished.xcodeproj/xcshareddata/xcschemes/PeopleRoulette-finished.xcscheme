@@ -28,6 +28,16 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "391E84D421942FED006ADAAF"
+               BuildableName = "PeopleRoulette-finishedTests.xctest"
+               BlueprintName = "PeopleRoulette-finishedTests"
+               ReferencedContainer = "container:PeopleRoulette-finished.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference

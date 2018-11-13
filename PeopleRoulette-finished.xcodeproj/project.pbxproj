@@ -39,8 +39,9 @@
 		39DF46AC219A661000A1AE0E /* UsersListItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39DF46AA219A661000A1AE0E /* UsersListItemCell.swift */; };
 		39DF46AE219A6A5000A1AE0E /* UsersListItemCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39DF46AD219A6A4F00A1AE0E /* UsersListItemCellViewModel.swift */; };
 		39DF46B0219A6D1700A1AE0E /* UsersListItemCellViewModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39DF46AF219A6D1700A1AE0E /* UsersListItemCellViewModelSpec.swift */; };
-		50D8D7D8BFD604F1A1C8E904 /* Pods_PeopleRoulette.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2F63306F40D9DEACD4B2B52 /* Pods_PeopleRoulette.framework */; };
 		514AB7F0CD1E4009E4C446D3 /* Pods_PeopleRoulette_PeopleRouletteTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0187F46001111C981F6B770 /* Pods_PeopleRoulette_PeopleRouletteTests.framework */; };
+		57184F7A42E9A664149DD857 /* Pods_PeopleRoulette_finished.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA3C360D26EF85753EFB6351 /* Pods_PeopleRoulette_finished.framework */; };
+		8243C054A8DB628F784D2268 /* Pods_PeopleRoulette_finished_PeopleRoulette_finishedTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BA6C2594DC8D4C751769DCA /* Pods_PeopleRoulette_finished_PeopleRoulette_finishedTests.framework */; };
 		AB1FFFED2195EE17000D1120 /* RouletteHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB1FFFEC2195EE17000D1120 /* RouletteHandler.swift */; };
 		AB1FFFEF2195F161000D1120 /* Array+Darwin.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB1FFFEE2195F161000D1120 /* Array+Darwin.swift */; };
 /* End PBXBuildFile section */
@@ -56,6 +57,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0B607CE3E1D467AA11B8AD40 /* Pods-PeopleRoulette-finished-PeopleRoulette-finishedTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PeopleRoulette-finished-PeopleRoulette-finishedTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PeopleRoulette-finished-PeopleRoulette-finishedTests/Pods-PeopleRoulette-finished-PeopleRoulette-finishedTests.debug.xcconfig"; sourceTree = "<group>"; };
+		278BF44C919A22B5DD77D50D /* Pods-PeopleRoulette-finished.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PeopleRoulette-finished.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PeopleRoulette-finished/Pods-PeopleRoulette-finished.debug.xcconfig"; sourceTree = "<group>"; };
 		391E84C121942FEC006ADAAF /* PeopleRoulette-finished.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PeopleRoulette-finished.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		391E84C421942FEC006ADAAF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		391E84C621942FEC006ADAAF /* PeopleRouletteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleRouletteViewController.swift; sourceTree = "<group>"; };
@@ -94,12 +97,16 @@
 		39DF46AF219A6D1700A1AE0E /* UsersListItemCellViewModelSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersListItemCellViewModelSpec.swift; sourceTree = "<group>"; };
 		59A0F534D1168164B19F47F1 /* Pods-PeopleRoulette-PeopleRouletteTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PeopleRoulette-PeopleRouletteTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PeopleRoulette-PeopleRouletteTests/Pods-PeopleRoulette-PeopleRouletteTests.release.xcconfig"; sourceTree = "<group>"; };
 		76C955C6947BADED57E9C9C9 /* Pods-PeopleRoulette.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PeopleRoulette.release.xcconfig"; path = "Pods/Target Support Files/Pods-PeopleRoulette/Pods-PeopleRoulette.release.xcconfig"; sourceTree = "<group>"; };
+		9BA6C2594DC8D4C751769DCA /* Pods_PeopleRoulette_finished_PeopleRoulette_finishedTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PeopleRoulette_finished_PeopleRoulette_finishedTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A701FBC437DAEAF6FED8A818 /* Pods-PeopleRoulette-PeopleRouletteTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PeopleRoulette-PeopleRouletteTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PeopleRoulette-PeopleRouletteTests/Pods-PeopleRoulette-PeopleRouletteTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A8BB10ECB758BA7EA23DE7FE /* Pods-PeopleRoulette.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PeopleRoulette.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PeopleRoulette/Pods-PeopleRoulette.debug.xcconfig"; sourceTree = "<group>"; };
 		AB1FFFEC2195EE17000D1120 /* RouletteHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouletteHandler.swift; sourceTree = "<group>"; };
 		AB1FFFEE2195F161000D1120 /* Array+Darwin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Darwin.swift"; sourceTree = "<group>"; };
+		BA3C360D26EF85753EFB6351 /* Pods_PeopleRoulette_finished.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PeopleRoulette_finished.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C81A6BDF7EBF6252F3A65A46 /* Pods-PeopleRoulette-finished.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PeopleRoulette-finished.release.xcconfig"; path = "Pods/Target Support Files/Pods-PeopleRoulette-finished/Pods-PeopleRoulette-finished.release.xcconfig"; sourceTree = "<group>"; };
 		E0187F46001111C981F6B770 /* Pods_PeopleRoulette_PeopleRouletteTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PeopleRoulette_PeopleRouletteTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2F63306F40D9DEACD4B2B52 /* Pods_PeopleRoulette.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PeopleRoulette.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FEEC6DDA952775FEEFAA5821 /* Pods-PeopleRoulette-finished-PeopleRoulette-finishedTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PeopleRoulette-finished-PeopleRoulette-finishedTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PeopleRoulette-finished-PeopleRoulette-finishedTests/Pods-PeopleRoulette-finished-PeopleRoulette-finishedTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,7 +114,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				50D8D7D8BFD604F1A1C8E904 /* Pods_PeopleRoulette.framework in Frameworks */,
+				57184F7A42E9A664149DD857 /* Pods_PeopleRoulette_finished.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -116,6 +123,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				514AB7F0CD1E4009E4C446D3 /* Pods_PeopleRoulette_PeopleRouletteTests.framework in Frameworks */,
+				8243C054A8DB628F784D2268 /* Pods_PeopleRoulette_finished_PeopleRoulette_finishedTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -365,6 +373,8 @@
 			children = (
 				F2F63306F40D9DEACD4B2B52 /* Pods_PeopleRoulette.framework */,
 				E0187F46001111C981F6B770 /* Pods_PeopleRoulette_PeopleRouletteTests.framework */,
+				BA3C360D26EF85753EFB6351 /* Pods_PeopleRoulette_finished.framework */,
+				9BA6C2594DC8D4C751769DCA /* Pods_PeopleRoulette_finished_PeopleRoulette_finishedTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -376,6 +386,10 @@
 				76C955C6947BADED57E9C9C9 /* Pods-PeopleRoulette.release.xcconfig */,
 				A701FBC437DAEAF6FED8A818 /* Pods-PeopleRoulette-PeopleRouletteTests.debug.xcconfig */,
 				59A0F534D1168164B19F47F1 /* Pods-PeopleRoulette-PeopleRouletteTests.release.xcconfig */,
+				278BF44C919A22B5DD77D50D /* Pods-PeopleRoulette-finished.debug.xcconfig */,
+				C81A6BDF7EBF6252F3A65A46 /* Pods-PeopleRoulette-finished.release.xcconfig */,
+				0B607CE3E1D467AA11B8AD40 /* Pods-PeopleRoulette-finished-PeopleRoulette-finishedTests.debug.xcconfig */,
+				FEEC6DDA952775FEEFAA5821 /* Pods-PeopleRoulette-finished-PeopleRoulette-finishedTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -497,7 +511,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-PeopleRoulette-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-PeopleRoulette-finished-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -512,7 +526,7 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-PeopleRoulette/Pods-PeopleRoulette-frameworks.sh",
+				"${SRCROOT}/Pods/Target Support Files/Pods-PeopleRoulette-finished/Pods-PeopleRoulette-finished-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
@@ -539,7 +553,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PeopleRoulette/Pods-PeopleRoulette-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PeopleRoulette-finished/Pods-PeopleRoulette-finished-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		748096D971AB19302BC8BD44 /* [CP] Check Pods Manifest.lock */ = {
@@ -557,7 +571,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-PeopleRoulette-PeopleRouletteTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-PeopleRoulette-finished-PeopleRoulette-finishedTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -572,7 +586,7 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-PeopleRoulette-PeopleRouletteTests/Pods-PeopleRoulette-PeopleRouletteTests-frameworks.sh",
+				"${SRCROOT}/Pods/Target Support Files/Pods-PeopleRoulette-finished-PeopleRoulette-finishedTests/Pods-PeopleRoulette-finished-PeopleRoulette-finishedTests-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
@@ -603,7 +617,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PeopleRoulette-PeopleRouletteTests/Pods-PeopleRoulette-PeopleRouletteTests-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PeopleRoulette-finished-PeopleRoulette-finishedTests/Pods-PeopleRoulette-finished-PeopleRoulette-finishedTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -794,7 +808,7 @@
 		};
 		391E84DF21942FED006ADAAF /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A8BB10ECB758BA7EA23DE7FE /* Pods-PeopleRoulette.debug.xcconfig */;
+			baseConfigurationReference = 278BF44C919A22B5DD77D50D /* Pods-PeopleRoulette-finished.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -812,7 +826,7 @@
 		};
 		391E84E021942FED006ADAAF /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 76C955C6947BADED57E9C9C9 /* Pods-PeopleRoulette.release.xcconfig */;
+			baseConfigurationReference = C81A6BDF7EBF6252F3A65A46 /* Pods-PeopleRoulette-finished.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -830,7 +844,7 @@
 		};
 		391E84E221942FED006ADAAF /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A701FBC437DAEAF6FED8A818 /* Pods-PeopleRoulette-PeopleRouletteTests.debug.xcconfig */;
+			baseConfigurationReference = 0B607CE3E1D467AA11B8AD40 /* Pods-PeopleRoulette-finished-PeopleRoulette-finishedTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -853,7 +867,7 @@
 		};
 		391E84E321942FED006ADAAF /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 59A0F534D1168164B19F47F1 /* Pods-PeopleRoulette-PeopleRouletteTests.release.xcconfig */;
+			baseConfigurationReference = FEEC6DDA952775FEEFAA5821 /* Pods-PeopleRoulette-finished-PeopleRoulette-finishedTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
