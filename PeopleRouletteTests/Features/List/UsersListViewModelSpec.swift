@@ -12,7 +12,7 @@ import Nimble
 import Swinject
 import SwinjectStoryboard
 
-@testable import PeopleRoulette
+@testable import PeopleRoulette_starter
 
 class UsersListViewModelSpec: QuickSpec {
     override func spec() {

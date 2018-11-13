@@ -10,13 +10,12 @@ import Foundation
 import ObjectMapper
 
 protocol UsersDownloading {
-    func getUsers(completion: @escaping ([User]?, String?) -> Void)
+    func getUsers(completion: @escaping ([User]?, String) -> Void)
 }
 
 protocol UsersRetrieving {
     func loadUsers() -> [User]?
 }
-
 
 class UsersHandler: UsersDownloading, UsersRetrieving {
     
@@ -26,8 +25,7 @@ class UsersHandler: UsersDownloading, UsersRetrieving {
     var realmRetriever: ObjectRetrieving!
     var realmPurger: ObjectPurging!
     
-    func getUsers(completion: @escaping ([User]?, String?) -> Void) {
-        // to be implemented
+    func getUsers(completion: @escaping ([User]?, String) -> Void) {
     }
     
     private func purgeUsers() {

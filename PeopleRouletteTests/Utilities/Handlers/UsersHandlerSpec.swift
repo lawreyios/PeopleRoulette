@@ -9,10 +9,8 @@
 import Foundation
 import Quick
 import Nimble
-import Swinject
-import SwinjectStoryboard
 
-@testable import PeopleRoulette
+@testable import PeopleRoulette_starter
 
 class UsersHandlerSpec: QuickSpec {
     override func spec() {

@@ -84,7 +84,7 @@ extension SwinjectStoryboard {
         
         defaultContainer.register(UsersRetrieving.self) { resolver in
             let handler = UsersHandler()
-            // to be implemented
+            handler.realmRetriever = resolver.resolve(ObjectRetrieving.self)
             return handler
         }
         

@@ -39,10 +39,9 @@
 		39DF46AC219A661000A1AE0E /* UsersListItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39DF46AA219A661000A1AE0E /* UsersListItemCell.swift */; };
 		39DF46AE219A6A5000A1AE0E /* UsersListItemCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39DF46AD219A6A4F00A1AE0E /* UsersListItemCellViewModel.swift */; };
 		39DF46B0219A6D1700A1AE0E /* UsersListItemCellViewModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39DF46AF219A6D1700A1AE0E /* UsersListItemCellViewModelSpec.swift */; };
-		39DF46B3219ABCBB00A1AE0E /* UsersHandlerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39DF46B2219ABCBB00A1AE0E /* UsersHandlerSpec.swift */; };
+		39DF46B4219ABFD200A1AE0E /* UsersHandlerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39DF46B2219ABCBB00A1AE0E /* UsersHandlerSpec.swift */; };
+		39DF46B6219AC3B900A1AE0E /* MockRealmHandlers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39DF46B5219AC3B900A1AE0E /* MockRealmHandlers.swift */; };
 		4D745932719D98423F69B66C /* Pods_PeopleRoulette_starter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5B151745BF2ADEE3CECFF9A /* Pods_PeopleRoulette_starter.framework */; };
-		50D8D7D8BFD604F1A1C8E904 /* Pods_PeopleRoulette.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2F63306F40D9DEACD4B2B52 /* Pods_PeopleRoulette.framework */; };
-		514AB7F0CD1E4009E4C446D3 /* Pods_PeopleRoulette_PeopleRouletteTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0187F46001111C981F6B770 /* Pods_PeopleRoulette_PeopleRouletteTests.framework */; };
 		65C11E17827A81330A9B8B20 /* Pods_PeopleRoulette_starter_PeopleRoulette_starterTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE0ED83AE361E2ED52DAA271 /* Pods_PeopleRoulette_starter_PeopleRoulette_starterTests.framework */; };
 		AB1FFFED2195EE17000D1120 /* RouletteHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB1FFFEC2195EE17000D1120 /* RouletteHandler.swift */; };
 		AB1FFFEF2195F161000D1120 /* Array+Darwin.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB1FFFEE2195F161000D1120 /* Array+Darwin.swift */; };
@@ -96,6 +95,7 @@
 		39DF46AD219A6A4F00A1AE0E /* UsersListItemCellViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersListItemCellViewModel.swift; sourceTree = "<group>"; };
 		39DF46AF219A6D1700A1AE0E /* UsersListItemCellViewModelSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersListItemCellViewModelSpec.swift; sourceTree = "<group>"; };
 		39DF46B2219ABCBB00A1AE0E /* UsersHandlerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersHandlerSpec.swift; sourceTree = "<group>"; };
+		39DF46B5219AC3B900A1AE0E /* MockRealmHandlers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRealmHandlers.swift; sourceTree = "<group>"; };
 		59A0F534D1168164B19F47F1 /* Pods-PeopleRoulette-PeopleRouletteTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PeopleRoulette-PeopleRouletteTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PeopleRoulette-PeopleRouletteTests/Pods-PeopleRoulette-PeopleRouletteTests.release.xcconfig"; sourceTree = "<group>"; };
 		76C955C6947BADED57E9C9C9 /* Pods-PeopleRoulette.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PeopleRoulette.release.xcconfig"; path = "Pods/Target Support Files/Pods-PeopleRoulette/Pods-PeopleRoulette.release.xcconfig"; sourceTree = "<group>"; };
 		8FCEE182F5ECA6A9C2BF190D /* Pods-PeopleRoulette-starter-PeopleRoulette-starterTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PeopleRoulette-starter-PeopleRoulette-starterTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PeopleRoulette-starter-PeopleRoulette-starterTests/Pods-PeopleRoulette-starter-PeopleRoulette-starterTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -117,7 +117,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				50D8D7D8BFD604F1A1C8E904 /* Pods_PeopleRoulette.framework in Frameworks */,
 				4D745932719D98423F69B66C /* Pods_PeopleRoulette_starter.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -126,7 +125,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				514AB7F0CD1E4009E4C446D3 /* Pods_PeopleRoulette_PeopleRouletteTests.framework in Frameworks */,
 				65C11E17827A81330A9B8B20 /* Pods_PeopleRoulette_starter_PeopleRoulette_starterTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -350,6 +348,7 @@
 			children = (
 				39231AAB21997B7A009D05C2 /* RouletteHandlerSpec.swift */,
 				39DF46B2219ABCBB00A1AE0E /* UsersHandlerSpec.swift */,
+				39DF46B5219AC3B900A1AE0E /* MockRealmHandlers.swift */,
 			);
 			path = Handlers;
 			sourceTree = "<group>";
@@ -639,6 +638,7 @@
 				AB1FFFEF2195F161000D1120 /* Array+Darwin.swift in Sources */,
 				AB1FFFED2195EE17000D1120 /* RouletteHandler.swift in Sources */,
 				391E85002194366D006ADAAF /* UserDetailsViewModel.swift in Sources */,
+				39DF46B6219AC3B900A1AE0E /* MockRealmHandlers.swift in Sources */,
 				39DF46AC219A661000A1AE0E /* UsersListItemCell.swift in Sources */,
 				393445032195210E00974CE8 /* UsersListViewController.swift in Sources */,
 				391E84F621943609006ADAAF /* DependencyAssembly.swift in Sources */,
@@ -652,7 +652,6 @@
 				393445052195215300974CE8 /* UsersListViewModel.swift in Sources */,
 				391E84C521942FEC006ADAAF /* AppDelegate.swift in Sources */,
 				391E84E621943241006ADAAF /* Constants+Networking.swift in Sources */,
-				39DF46B3219ABCBB00A1AE0E /* UsersHandlerSpec.swift in Sources */,
 				391E84EE219433D1006ADAAF /* String+PR.swift in Sources */,
 				391E850C2194387E006ADAAF /* NetworkStatus.swift in Sources */,
 				391E84FC21943655006ADAAF /* PeopleRouletteViewModel.swift in Sources */,
@@ -668,6 +667,7 @@
 				39DF46B0219A6D1700A1AE0E /* UsersListItemCellViewModelSpec.swift in Sources */,
 				39231AA221997319009D05C2 /* MockUsers.swift in Sources */,
 				39231AA8219979CA009D05C2 /* UserDetailsViewModelSpec.swift in Sources */,
+				39DF46B4219ABFD200A1AE0E /* UsersHandlerSpec.swift in Sources */,
 				39231AA5219977C8009D05C2 /* UsersListViewModelSpec.swift in Sources */,
 				39231AAC21997B7A009D05C2 /* RouletteHandlerSpec.swift in Sources */,
 				39231A9F2199728A009D05C2 /* PeopleRouletteViewModelSpec.swift in Sources */,

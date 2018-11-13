@@ -10,7 +10,7 @@ import Foundation
 import Quick
 import Nimble
 
-@testable import PeopleRoulette
+@testable import PeopleRoulette_starter
 
 class PeopleRouletteViewModelSpec: QuickSpec {
     override func spec() {
@@ -19,7 +19,7 @@ class PeopleRouletteViewModelSpec: QuickSpec {
 }
 
 class MockUsersDownloader: UsersDownloading {
-    func getUsers(completion: @escaping ([User]?, String?) -> Void) {
+    func getUsers(completion: @escaping ([User]?, String) -> Void) {
         // to be implemented
     }
 }

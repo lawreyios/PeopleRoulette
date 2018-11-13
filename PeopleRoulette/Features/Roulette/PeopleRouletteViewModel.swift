@@ -29,7 +29,7 @@ class PeopleRouletteViewModel {
         return tempData
     }
     
-    func getUsers(completion: @escaping ([User], String?) -> Void) {
+    func getUsers(completion: @escaping ([User], String) -> Void) {
         // to be implemented
     }
     
