@@ -11,6 +11,7 @@ import RealmSwift
 
 protocol ObjectSaving {
     func saveObjects(_ items: [Object])
+    func saveObject(_ item: Object)
 }
 
 protocol ObjectRetrieving {
@@ -78,6 +79,16 @@ class RealmHandler: ObjectSaving, ObjectRetrieving, ObjectPurging {
             print("Protection attribute \(protectionAttribute) set on \(filePath)")
         } else {
             print("Not able to verify data encryption setup on Realm file. Ignore if running in a simulator.")
+        }
+    }
+    
+    func saveObject(_ item: Object) {
+        do {
+            try realm.write {
+                realm.add(item)
+            }
+        } catch let error {
+            print("Save object \(item) with error: \(error).")
         }
     }
     

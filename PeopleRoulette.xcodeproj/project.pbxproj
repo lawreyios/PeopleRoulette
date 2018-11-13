@@ -9,10 +9,8 @@
 /* Begin PBXBuildFile section */
 		391E84C521942FEC006ADAAF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391E84C421942FEC006ADAAF /* AppDelegate.swift */; };
 		391E84C721942FEC006ADAAF /* PeopleRouletteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391E84C621942FEC006ADAAF /* PeopleRouletteViewController.swift */; };
-		391E84CA21942FEC006ADAAF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 391E84C821942FEC006ADAAF /* Main.storyboard */; };
 		391E84CC21942FED006ADAAF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 391E84CB21942FED006ADAAF /* Assets.xcassets */; };
 		391E84CF21942FED006ADAAF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 391E84CD21942FED006ADAAF /* LaunchScreen.storyboard */; };
-		391E84DA21942FED006ADAAF /* PeopleRouletteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391E84D921942FED006ADAAF /* PeopleRouletteTests.swift */; };
 		391E84E621943241006ADAAF /* Constants+Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391E84E521943241006ADAAF /* Constants+Networking.swift */; };
 		391E84E8219432B3006ADAAF /* RealmHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391E84E7219432B3006ADAAF /* RealmHandler.swift */; };
 		391E84EB2194337A006ADAAF /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391E84EA2194337A006ADAAF /* User.swift */; };
@@ -29,8 +27,18 @@
 		391E850E219438BB006ADAAF /* Constants+AlertMessages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391E850D219438BB006ADAAF /* Constants+AlertMessages.swift */; };
 		391E8510219438F9006ADAAF /* Constants+Numeric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391E850F219438F9006ADAAF /* Constants+Numeric.swift */; };
 		391E851221943B1D006ADAAF /* UsersHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391E851121943B1C006ADAAF /* UsersHandler.swift */; };
+		39231A9F2199728A009D05C2 /* PeopleRouletteViewModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39231A9E2199728A009D05C2 /* PeopleRouletteViewModelSpec.swift */; };
+		39231AA221997319009D05C2 /* MockUsers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39231AA121997319009D05C2 /* MockUsers.swift */; };
+		39231AA5219977C8009D05C2 /* UsersListViewModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39231AA4219977C8009D05C2 /* UsersListViewModelSpec.swift */; };
+		39231AA8219979CA009D05C2 /* UserDetailsViewModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39231AA7219979CA009D05C2 /* UserDetailsViewModelSpec.swift */; };
+		39231AAC21997B7A009D05C2 /* RouletteHandlerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39231AAB21997B7A009D05C2 /* RouletteHandlerSpec.swift */; };
+		39231AB1219980A8009D05C2 /* ViewControllerInjectorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39231AB0219980A8009D05C2 /* ViewControllerInjectorSpec.swift */; };
 		393445032195210E00974CE8 /* UsersListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 393445022195210E00974CE8 /* UsersListViewController.swift */; };
 		393445052195215300974CE8 /* UsersListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 393445042195215300974CE8 /* UsersListViewModel.swift */; };
+		39DF46A8219A660000A1AE0E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39DF46A7219A660000A1AE0E /* Main.storyboard */; };
+		39DF46AC219A661000A1AE0E /* UsersListItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39DF46AA219A661000A1AE0E /* UsersListItemCell.swift */; };
+		39DF46AE219A6A5000A1AE0E /* UsersListItemCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39DF46AD219A6A4F00A1AE0E /* UsersListItemCellViewModel.swift */; };
+		39DF46B0219A6D1700A1AE0E /* UsersListItemCellViewModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39DF46AF219A6D1700A1AE0E /* UsersListItemCellViewModelSpec.swift */; };
 		50D8D7D8BFD604F1A1C8E904 /* Pods_PeopleRoulette.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2F63306F40D9DEACD4B2B52 /* Pods_PeopleRoulette.framework */; };
 		514AB7F0CD1E4009E4C446D3 /* Pods_PeopleRoulette_PeopleRouletteTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0187F46001111C981F6B770 /* Pods_PeopleRoulette_PeopleRouletteTests.framework */; };
 		AB1FFFED2195EE17000D1120 /* RouletteHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB1FFFEC2195EE17000D1120 /* RouletteHandler.swift */; };
@@ -51,12 +59,10 @@
 		391E84C121942FEC006ADAAF /* PeopleRoulette.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PeopleRoulette.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		391E84C421942FEC006ADAAF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		391E84C621942FEC006ADAAF /* PeopleRouletteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleRouletteViewController.swift; sourceTree = "<group>"; };
-		391E84C921942FEC006ADAAF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		391E84CB21942FED006ADAAF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		391E84CE21942FED006ADAAF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		391E84D021942FED006ADAAF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		391E84D521942FED006ADAAF /* PeopleRouletteTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PeopleRouletteTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		391E84D921942FED006ADAAF /* PeopleRouletteTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleRouletteTests.swift; sourceTree = "<group>"; };
 		391E84DB21942FED006ADAAF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		391E84E521943241006ADAAF /* Constants+Networking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Constants+Networking.swift"; sourceTree = "<group>"; };
 		391E84E7219432B3006ADAAF /* RealmHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmHandler.swift; sourceTree = "<group>"; };
@@ -74,8 +80,18 @@
 		391E850D219438BB006ADAAF /* Constants+AlertMessages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Constants+AlertMessages.swift"; sourceTree = "<group>"; };
 		391E850F219438F9006ADAAF /* Constants+Numeric.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Constants+Numeric.swift"; sourceTree = "<group>"; };
 		391E851121943B1C006ADAAF /* UsersHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersHandler.swift; sourceTree = "<group>"; };
+		39231A9E2199728A009D05C2 /* PeopleRouletteViewModelSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleRouletteViewModelSpec.swift; sourceTree = "<group>"; };
+		39231AA121997319009D05C2 /* MockUsers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUsers.swift; sourceTree = "<group>"; };
+		39231AA4219977C8009D05C2 /* UsersListViewModelSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersListViewModelSpec.swift; sourceTree = "<group>"; };
+		39231AA7219979CA009D05C2 /* UserDetailsViewModelSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsViewModelSpec.swift; sourceTree = "<group>"; };
+		39231AAB21997B7A009D05C2 /* RouletteHandlerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouletteHandlerSpec.swift; sourceTree = "<group>"; };
+		39231AB0219980A8009D05C2 /* ViewControllerInjectorSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerInjectorSpec.swift; sourceTree = "<group>"; };
 		393445022195210E00974CE8 /* UsersListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersListViewController.swift; sourceTree = "<group>"; };
 		393445042195215300974CE8 /* UsersListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersListViewModel.swift; sourceTree = "<group>"; };
+		39DF46A7219A660000A1AE0E /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		39DF46AA219A661000A1AE0E /* UsersListItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersListItemCell.swift; sourceTree = "<group>"; };
+		39DF46AD219A6A4F00A1AE0E /* UsersListItemCellViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersListItemCellViewModel.swift; sourceTree = "<group>"; };
+		39DF46AF219A6D1700A1AE0E /* UsersListItemCellViewModelSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersListItemCellViewModelSpec.swift; sourceTree = "<group>"; };
 		59A0F534D1168164B19F47F1 /* Pods-PeopleRoulette-PeopleRouletteTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PeopleRoulette-PeopleRouletteTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PeopleRoulette-PeopleRouletteTests/Pods-PeopleRoulette-PeopleRouletteTests.release.xcconfig"; sourceTree = "<group>"; };
 		76C955C6947BADED57E9C9C9 /* Pods-PeopleRoulette.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PeopleRoulette.release.xcconfig"; path = "Pods/Target Support Files/Pods-PeopleRoulette/Pods-PeopleRoulette.release.xcconfig"; sourceTree = "<group>"; };
 		A701FBC437DAEAF6FED8A818 /* Pods-PeopleRoulette-PeopleRouletteTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PeopleRoulette-PeopleRouletteTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PeopleRoulette-PeopleRouletteTests/Pods-PeopleRoulette-PeopleRouletteTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -142,7 +158,8 @@
 		391E84D821942FED006ADAAF /* PeopleRouletteTests */ = {
 			isa = PBXGroup;
 			children = (
-				391E84D921942FED006ADAAF /* PeopleRouletteTests.swift */,
+				39231A9B21997239009D05C2 /* Features */,
+				39231A9A21997229009D05C2 /* Utilities */,
 				391E84DB21942FED006ADAAF /* Info.plist */,
 			);
 			path = PeopleRouletteTests;
@@ -219,7 +236,7 @@
 		391E850221943684006ADAAF /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
-				391E84C821942FEC006ADAAF /* Main.storyboard */,
+				39DF46A7219A660000A1AE0E /* Main.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -263,11 +280,82 @@
 			path = Network;
 			sourceTree = "<group>";
 		};
+		39231A9A21997229009D05C2 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				39231AAF2199809E009D05C2 /* Services */,
+				39231AAA21997B65009D05C2 /* Handlers */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		39231A9B21997239009D05C2 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				39231AA021997310009D05C2 /* MockData */,
+				39231A9C21997260009D05C2 /* Roulette */,
+				39231AA3219977AF009D05C2 /* List */,
+				39231AA6219979AF009D05C2 /* Details */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		39231A9C21997260009D05C2 /* Roulette */ = {
+			isa = PBXGroup;
+			children = (
+				39231A9E2199728A009D05C2 /* PeopleRouletteViewModelSpec.swift */,
+			);
+			path = Roulette;
+			sourceTree = "<group>";
+		};
+		39231AA021997310009D05C2 /* MockData */ = {
+			isa = PBXGroup;
+			children = (
+				39231AA121997319009D05C2 /* MockUsers.swift */,
+			);
+			path = MockData;
+			sourceTree = "<group>";
+		};
+		39231AA3219977AF009D05C2 /* List */ = {
+			isa = PBXGroup;
+			children = (
+				39231AA4219977C8009D05C2 /* UsersListViewModelSpec.swift */,
+				39DF46AF219A6D1700A1AE0E /* UsersListItemCellViewModelSpec.swift */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		39231AA6219979AF009D05C2 /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				39231AA7219979CA009D05C2 /* UserDetailsViewModelSpec.swift */,
+			);
+			path = Details;
+			sourceTree = "<group>";
+		};
+		39231AAA21997B65009D05C2 /* Handlers */ = {
+			isa = PBXGroup;
+			children = (
+				39231AAB21997B7A009D05C2 /* RouletteHandlerSpec.swift */,
+			);
+			path = Handlers;
+			sourceTree = "<group>";
+		};
+		39231AAF2199809E009D05C2 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				39231AB0219980A8009D05C2 /* ViewControllerInjectorSpec.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		39344501219520FC00974CE8 /* List */ = {
 			isa = PBXGroup;
 			children = (
 				393445022195210E00974CE8 /* UsersListViewController.swift */,
 				393445042195215300974CE8 /* UsersListViewModel.swift */,
+				39DF46AA219A661000A1AE0E /* UsersListItemCell.swift */,
+				39DF46AD219A6A4F00A1AE0E /* UsersListItemCellViewModel.swift */,
 			);
 			path = List;
 			sourceTree = "<group>";
@@ -349,6 +437,7 @@
 					};
 					391E84D421942FED006ADAAF = {
 						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1000;
 						TestTargetID = 391E84C021942FEC006ADAAF;
 					};
 				};
@@ -377,9 +466,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39DF46A8219A660000A1AE0E /* Main.storyboard in Resources */,
 				391E84CF21942FED006ADAAF /* LaunchScreen.storyboard in Resources */,
 				391E84CC21942FED006ADAAF /* Assets.xcassets in Resources */,
-				391E84CA21942FEC006ADAAF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -531,6 +620,7 @@
 				AB1FFFEF2195F161000D1120 /* Array+Darwin.swift in Sources */,
 				AB1FFFED2195EE17000D1120 /* RouletteHandler.swift in Sources */,
 				391E85002194366D006ADAAF /* UserDetailsViewModel.swift in Sources */,
+				39DF46AC219A661000A1AE0E /* UsersListItemCell.swift in Sources */,
 				393445032195210E00974CE8 /* UsersListViewController.swift in Sources */,
 				391E84F621943609006ADAAF /* DependencyAssembly.swift in Sources */,
 				391E850E219438BB006ADAAF /* Constants+AlertMessages.swift in Sources */,
@@ -539,6 +629,7 @@
 				391E84C721942FEC006ADAAF /* PeopleRouletteViewController.swift in Sources */,
 				391E84F2219435B9006ADAAF /* Constants+ViewIdentifiers.swift in Sources */,
 				391E84F4219435F4006ADAAF /* ViewControllerInjector.swift in Sources */,
+				39DF46AE219A6A5000A1AE0E /* UsersListItemCellViewModel.swift in Sources */,
 				393445052195215300974CE8 /* UsersListViewModel.swift in Sources */,
 				391E84C521942FEC006ADAAF /* AppDelegate.swift in Sources */,
 				391E84E621943241006ADAAF /* Constants+Networking.swift in Sources */,
@@ -553,7 +644,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				391E84DA21942FED006ADAAF /* PeopleRouletteTests.swift in Sources */,
+				39231AB1219980A8009D05C2 /* ViewControllerInjectorSpec.swift in Sources */,
+				39DF46B0219A6D1700A1AE0E /* UsersListItemCellViewModelSpec.swift in Sources */,
+				39231AA221997319009D05C2 /* MockUsers.swift in Sources */,
+				39231AA8219979CA009D05C2 /* UserDetailsViewModelSpec.swift in Sources */,
+				39231AA5219977C8009D05C2 /* UsersListViewModelSpec.swift in Sources */,
+				39231AAC21997B7A009D05C2 /* RouletteHandlerSpec.swift in Sources */,
+				39231A9F2199728A009D05C2 /* PeopleRouletteViewModelSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -568,14 +665,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		391E84C821942FEC006ADAAF /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				391E84C921942FEC006ADAAF /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		391E84CD21942FED006ADAAF /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -745,6 +834,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = PeopleRouletteTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -754,6 +844,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.PeopleRouletteTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PeopleRoulette.app/PeopleRoulette";
@@ -766,6 +857,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = PeopleRouletteTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

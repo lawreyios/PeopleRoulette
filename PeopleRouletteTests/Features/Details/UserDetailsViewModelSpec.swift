@@ -7,3 +7,25 @@
 //
 
 import Foundation
+import Quick
+import Nimble
+import Swinject
+import SwinjectStoryboard
+
+@testable import PeopleRoulette
+
+class UserDetailsViewModelSpec: QuickSpec {
+    override func spec() {
+        let viewModel = UserDetailsViewModel()
+        
+        describe("Given user details") {
+            beforeEach {
+                viewModel.setupUserInfo(MockUsers.data.first!)
+            }
+            
+            it("should display user info") {
+                expect(viewModel.userInfo).to(equal("User 1\nUsername 1\nEmail 1"))
+            }
+        }
+    }
+}

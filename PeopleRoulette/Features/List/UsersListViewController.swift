@@ -44,12 +44,23 @@ class UsersListViewController: UITableViewController {
         return usersListViewModel.numberOfRows
     }
     
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableView.automaticDimension
+    }
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "UserCell", for: indexPath)
-        let user = usersListViewModel.getUser(for: indexPath.row)
-        cell.textLabel?.text = user.name
-        cell.detailTextLabel?.text = user.company?.name
-        return cell
+        let cellViewModel = usersListViewModel.getCellViewModel(for: indexPath.row)
+        return populateUsersListItemCell(with: cellViewModel, at: indexPath) ?? UITableViewCell()
+    }
+    
+    private func populateUsersListItemCell(with viewModel: UsersListItemRepresenting, at indexPath: IndexPath) -> UsersListItemCell? {
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "UsersListItemCell", for: indexPath) as? UsersListItemCell {
+            let user = usersListViewModel.getCellViewModel(for: indexPath.row)
+            cell.configure(with: user.name, and: user.company)
+            return cell
+        }
+        
+        return nil
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

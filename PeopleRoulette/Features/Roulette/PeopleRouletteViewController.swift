@@ -42,6 +42,8 @@ class PeopleRouletteViewController: UIViewController {
         super.viewWillAppear(animated)
         
         setupNavigationBar()
+        
+        quantityTextField.becomeFirstResponder()
     }
     
     private func setupNavigationBar() {
@@ -58,7 +60,12 @@ class PeopleRouletteViewController: UIViewController {
     
     private func getUsers() {
         showLoadingSpinner()
-        peopleRouletteViewModel.getUsers { [weak self] users in
+        peopleRouletteViewModel.getUsers { [weak self] users, errorMessage in
+            guard !users.isEmpty else {
+                self?.showErrorAlert(with: errorMessage ?? "Error getting users.")
+                return
+            }
+            
             self?.hideLoadingSpinner()
         }
     }
@@ -99,6 +106,16 @@ extension PeopleRouletteViewController: UIPickerViewDelegate, UIPickerViewDataSo
 extension PeopleRouletteViewController: UITextFieldDelegate {
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         return false
+    }
+}
+
+extension PeopleRouletteViewController {
+    func showErrorAlert(with message: String) {
+        let okAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
+        let alert = UIAlertController(title: nil, message: message, preferredStyle: .alert)
+        alert.addAction(okAction)
+        
+        present(alert, animated: true, completion: nil)
     }
 }
 

@@ -28,13 +28,14 @@ class PeopleRouletteViewModel {
         return tempData
     }
     
-    func getUsers(completion: @escaping ([User]) -> Void) {
+    func getUsers(completion: @escaping ([User], String?) -> Void) {
         usersDownloader.getUsers { users, errorMessage in
-            guard let users = users else {
+            guard let users = users, !users.isEmpty else {
+                completion([], errorMessage)
                 return
             }
             
-            completion(users)
+            completion(users, nil)
         }
     }
     

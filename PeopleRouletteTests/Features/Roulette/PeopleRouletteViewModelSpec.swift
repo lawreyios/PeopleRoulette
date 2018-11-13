@@ -1,5 +1,5 @@
 //
-//  PeopleRouletteViewModelTests.swift
+//  PeopleRouletteViewModelSpec.swift
 //  PeopleRouletteTests
 //
 //  Created by Lawrence Tan on 12/11/18.
@@ -12,7 +12,7 @@ import Nimble
 
 @testable import PeopleRoulette
 
-class PeopleRouletteViewModelTests: QuickSpec {
+class PeopleRouletteViewModelSpec: QuickSpec {
     override func spec() {
         let viewModel = PeopleRouletteViewModel()
         
