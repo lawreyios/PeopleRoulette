@@ -9,7 +9,7 @@
 import Foundation
 
 protocol PeopleRouletting {
-    func getRouletteResults(for numberOfPeople: Int) -> [User]
+    // to be implemented
 }
 
 class RouletteHandler: PeopleRouletting {
@@ -17,10 +17,7 @@ class RouletteHandler: PeopleRouletting {
     var usersRetriever: UsersRetrieving!
     
     func getRouletteResults(for numberOfPeople: Int) -> [User] {
-        guard let users = usersRetriever.loadUsers() else {
-            return []
-        }
-        
-        return users.sample(UInt(numberOfPeople))
+        // to be implemented
+        return []
     }    
 }

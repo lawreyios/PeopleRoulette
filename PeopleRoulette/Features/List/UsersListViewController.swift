@@ -11,12 +11,6 @@ import UIKit
 class UsersListViewController: UITableViewController {
     
     var usersListViewModel: UsersListViewModel!
-    var viewControllerInjector: ViewControllerInjecting!
-    
-    lazy var userDetailsViewController: UserDetailsViewController = {
-        let viewController = viewControllerInjector.inject(viewController: ViewIdentifier.userDetailsViewController, in: Storyboard.main) as? UserDetailsViewController ?? UserDetailsViewController()
-        return viewController
-    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,7 +35,8 @@ class UsersListViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return usersListViewModel.numberOfRows
+        // to be implemented
+        return 1
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -49,23 +44,16 @@ class UsersListViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cellViewModel = usersListViewModel.getCellViewModel(for: indexPath.row)
-        return populateUsersListItemCell(with: cellViewModel, at: indexPath) ?? UITableViewCell()
+        // to be implemented
+        return UITableViewCell()
     }
     
     private func populateUsersListItemCell(with viewModel: UsersListItemRepresenting, at indexPath: IndexPath) -> UsersListItemCell? {
-        if let cell = tableView.dequeueReusableCell(withIdentifier: "UsersListItemCell", for: indexPath) as? UsersListItemCell {
-            let user = usersListViewModel.getCellViewModel(for: indexPath.row)
-            cell.configure(with: user.name, and: user.company)
-            return cell
-        }
-        
+        // to be implemented
         return nil
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let user = usersListViewModel.getUser(for: indexPath.row)
-        userDetailsViewController.userDetailsViewModel.setupUserInfo(user)
-        navigationController?.pushViewController(userDetailsViewController, animated: true)
+        // to be implemented
     }
 }

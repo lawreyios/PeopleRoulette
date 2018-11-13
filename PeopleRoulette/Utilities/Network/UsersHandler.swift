@@ -27,34 +27,19 @@ class UsersHandler: UsersDownloading, UsersRetrieving {
     var realmPurger: ObjectPurging!
     
     func getUsers(completion: @escaping ([User]?, String?) -> Void) {
-        let request = APIRequest(url: URL.baseURL + EndPoint.users, method: .get)
-        apiHandler.sendRequest(request) { success, data, errorMessage in
-            guard success else {
-                completion(nil, AlertMessage.requestFailure)
-                return
-            }
-            
-            guard let users = Mapper<User>().mapArray(JSONObject: data) else {
-                completion(nil, AlertMessage.requestFailure)
-                return
-            }
-            
-            self.purgeUsers()
-            self.saveUsers(users)
-            
-            completion(users, nil)
-        }
+        // to be implemented
     }
     
     private func purgeUsers() {
-        realmPurger.deleteObjects(for: User.self, cascade: true)
+        // to be implemented
     }
     
     private func saveUsers(_ users: [User]) {
-        realmSaver.saveObjects(users)
+        // to be implemented
     }
     
     func loadUsers() -> [User]? {
-        return realmRetriever.getObjects(for: User.self) as? [User]
+        // to be implemented
+        return nil
     }
 }

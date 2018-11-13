@@ -21,7 +21,7 @@ class UserDetailsViewController: UIViewController {
     }
     
     private func setupUserInfo() {
-        userDetailsLabel.text = userDetailsViewModel.userInfo
+        // to be implemented
     }
 
 }

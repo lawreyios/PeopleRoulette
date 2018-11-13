@@ -13,7 +13,8 @@ class UserDetailsViewModel {
     private var selectedUser: User!
     
     var userInfo: String {
-        return "\(selectedUser.name)\n\(selectedUser.username)\n\(selectedUser.email)"
+        // to be implemented
+        return .empty
     }
     
     func setupUserInfo(_ user: User) {

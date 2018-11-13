@@ -16,16 +16,6 @@ import SwinjectStoryboard
 
 class UserDetailsViewModelSpec: QuickSpec {
     override func spec() {
-        let viewModel = UserDetailsViewModel()
-        
-        describe("Given user details") {
-            beforeEach {
-                viewModel.setupUserInfo(MockUsers.data.first!)
-            }
-            
-            it("should display user info") {
-                expect(viewModel.userInfo).to(equal("User 1\nUsername 1\nEmail 1"))
-            }
-        }
+        // to be implemented
     }
 }

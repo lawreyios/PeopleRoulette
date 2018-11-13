@@ -14,10 +14,11 @@ class PeopleRouletteViewModel {
     var usersRetriever: UsersRetrieving!
     
     var users: [User] {
-        return usersRetriever.loadUsers() ?? []
+        // to be implemented
+        return []
     }
     
-    var maxCount: Int { return users.count }
+    var maxCount: Int { return 3 }
     var minCount: Int { return 1 }
     
     var pickerData: [Int] {
@@ -29,14 +30,7 @@ class PeopleRouletteViewModel {
     }
     
     func getUsers(completion: @escaping ([User], String?) -> Void) {
-        usersDownloader.getUsers { users, errorMessage in
-            guard let users = users, !users.isEmpty else {
-                completion([], errorMessage)
-                return
-            }
-            
-            completion(users, nil)
-        }
+        // to be implemented
     }
     
 }

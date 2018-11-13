@@ -10,17 +10,12 @@
 import Foundation
 
 protocol UsersListItemRepresenting {
-    var name: String { get }
-    var company: String { get }
+    // to be implemented
 }
 
 class UsersListItemCellViewModel: UsersListItemRepresenting {
     
-    var name = String.empty
-    var company = String.empty
-    
     init(user: User) {
-        name = user.name
-        company = user.company?.name ?? .empty
+        // to be implemented
     }    
 }

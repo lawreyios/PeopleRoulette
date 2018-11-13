@@ -16,31 +16,28 @@ extension SwinjectStoryboard {
         Container.loggingFunction = nil
         
         defaultContainer.storyboardInitCompleted(PeopleRouletteViewController.self) { resolver, controller in
-            controller.peopleRouletteViewModel = resolver.resolve(PeopleRouletteViewModel.self)
-            controller.viewControllerInjector = resolver.resolve(ViewControllerInjecting.self)
+            // to be implemented
         }
         
         defaultContainer.storyboardInitCompleted(UsersListViewController.self) { resolver, controller in
-            controller.usersListViewModel = resolver.resolve(UsersListViewModel.self)
-            controller.viewControllerInjector = resolver.resolve(ViewControllerInjecting.self)
+            // to be implemented
         }
         
         defaultContainer.storyboardInitCompleted(UserDetailsViewController.self) { resolver, controller in
-            controller.userDetailsViewModel = resolver.resolve(UserDetailsViewModel.self)
+            // to be implemented
         }
     }
     
     class func registerViewModels() {
         defaultContainer.register(PeopleRouletteViewModel.self) { resolver in
             let viewModel = PeopleRouletteViewModel()
-            viewModel.usersDownloader = resolver.resolve(UsersDownloading.self)
-            viewModel.usersRetriever = resolver.resolve(UsersRetrieving.self)
+            // to be implemented
             return viewModel
         }
         
         defaultContainer.register(UsersListViewModel.self) { resolver in
             let viewModel = UsersListViewModel()
-            viewModel.peopleRoulette = resolver.resolve(PeopleRouletting.self)
+            // to be implemented
             return viewModel
         }
         
@@ -87,13 +84,13 @@ extension SwinjectStoryboard {
         
         defaultContainer.register(UsersRetrieving.self) { resolver in
             let handler = UsersHandler()
-            handler.realmRetriever = resolver.resolve(ObjectRetrieving.self)
+            // to be implemented
             return handler
         }
         
         defaultContainer.register(PeopleRouletting.self) { resolver in
             let handler = RouletteHandler()
-            handler.usersRetriever = resolver.resolve(UsersRetrieving.self)
+            // to be implemented
             return handler
         }
     }

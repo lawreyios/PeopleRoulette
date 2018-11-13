@@ -14,7 +14,6 @@ class PeopleRouletteViewController: UIViewController {
     private var pickerView: UIPickerView!
     
     var peopleRouletteViewModel: PeopleRouletteViewModel!
-    var viewControllerInjector: ViewControllerInjecting!
     
     lazy var activityIndicator: UIActivityIndicatorView = {
         let activityIndicator = UIActivityIndicatorView(style: .gray)
@@ -22,11 +21,6 @@ class PeopleRouletteViewController: UIViewController {
         activityIndicator.hidesWhenStopped = true
         view.addSubview(activityIndicator)
         return activityIndicator
-    }()
-    
-    lazy var usersListViewController: UsersListViewController = {
-        let viewController = viewControllerInjector.inject(viewController: ViewIdentifier.usersListViewController, in: Storyboard.main) as? UsersListViewController ?? UsersListViewController()
-        return viewController
     }()
     
     private var numberOfPeople = 1
@@ -59,15 +53,7 @@ class PeopleRouletteViewController: UIViewController {
     }
     
     private func getUsers() {
-        showLoadingSpinner()
-        peopleRouletteViewModel.getUsers { [weak self] users, errorMessage in
-            guard !users.isEmpty else {
-                self?.showErrorAlert(with: errorMessage ?? "Error getting users.")
-                return
-            }
-            
-            self?.hideLoadingSpinner()
-        }
+        // to be implemented
     }
     
     private func showLoadingSpinner() {
@@ -79,8 +65,7 @@ class PeopleRouletteViewController: UIViewController {
     }
     
     @IBAction func roulette(_ sender: UIButton) {
-        usersListViewController.usersListViewModel.setup(with: numberOfPeople)
-        navigationController?.pushViewController(usersListViewController, animated: true)
+        // to be implemented
     }
 }
 
@@ -90,16 +75,15 @@ extension PeopleRouletteViewController: UIPickerViewDelegate, UIPickerViewDataSo
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return peopleRouletteViewModel.maxCount
+        return 3
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return String(peopleRouletteViewModel.pickerData[row])
+        return "1"
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        numberOfPeople = peopleRouletteViewModel.pickerData[row]
-        quantityTextField.text = String(numberOfPeople)
+        // to be implemented
     }
 }
 

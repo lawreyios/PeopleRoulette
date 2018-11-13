@@ -15,24 +15,6 @@ import SwinjectStoryboard
 
 class ViewControllerInjectorSpec: QuickSpec {
     override func spec() {
-        let viewControllerInjector = SwinjectStoryboard.defaultContainer.resolve(ViewControllerInjecting.self)!
-        
-        describe("when PeopleRouletteViewController is injected") {
-            it("should load an instance of it") {
-                expect(viewControllerInjector.inject(viewController: ViewIdentifier.peopleRouletteViewController, in: Storyboard.main)).to(beAKindOf(PeopleRouletteViewController.self))
-            }
-        }
-        
-        describe("when UsersListViewController is injected") {
-            it("should load an instance of it") {
-                expect(viewControllerInjector.inject(viewController: ViewIdentifier.usersListViewController, in: Storyboard.main)).to(beAKindOf(UsersListViewController.self))
-            }
-        }
-        
-        describe("when UserDetailsViewController is injected") {
-            it("should load an instance of it") {
-                expect(viewControllerInjector.inject(viewController: ViewIdentifier.userDetailsViewController, in: Storyboard.main)).to(beAKindOf(UserDetailsViewController.self))
-            }
-        }
+        // to be implemented
     }
 }
