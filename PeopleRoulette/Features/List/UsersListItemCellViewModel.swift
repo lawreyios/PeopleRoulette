@@ -7,8 +7,6 @@
 //  Copyright © 2018 AppCoda. All rights reserved.
 //
 
-import Foundation
-
 protocol UsersListItemRepresenting {
     var name: String { get }
     var company: String { get }
@@ -22,5 +20,5 @@ class UsersListItemCellViewModel: UsersListItemRepresenting {
     init(user: User) {
         name = user.name
         company = user.company?.name ?? .empty
-    }    
+    }
 }

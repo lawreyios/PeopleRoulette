@@ -27,6 +27,7 @@ extension SwinjectStoryboard {
         
         defaultContainer.storyboardInitCompleted(UserDetailsViewController.self) { resolver, controller in
             controller.userDetailsViewModel = resolver.resolve(UserDetailsViewModel.self)
+
         }
     }
     

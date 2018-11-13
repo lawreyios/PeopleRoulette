@@ -8,6 +8,7 @@
 
 import Foundation
 
+// 1
 protocol PeopleRouletting {
     func getRouletteResults(for numberOfPeople: Int) -> [User]
 }
@@ -16,6 +17,7 @@ class RouletteHandler: PeopleRouletting {
     
     var usersRetriever: UsersRetrieving!
     
+    // 1
     func getRouletteResults(for numberOfPeople: Int) -> [User] {
         guard let users = usersRetriever.loadUsers() else {
             return []

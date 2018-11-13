@@ -6,17 +6,17 @@
 //  Copyright © 2018 AppCoda. All rights reserved.
 //
 
-import Foundation
-
 class PeopleRouletteViewModel {
     
     var usersDownloader: UsersDownloading!
     var usersRetriever: UsersRetrieving!
     
-    var users: [User] {
+    // 1
+    private var users: [User] {
         return usersRetriever.loadUsers() ?? []
     }
     
+    // 2
     var maxCount: Int { return users.count }
     var minCount: Int { return 1 }
     
@@ -28,15 +28,15 @@ class PeopleRouletteViewModel {
         return tempData
     }
     
-    func getUsers(completion: @escaping ([User], String?) -> Void) {
+    // 3
+    func getUsers(completion: @escaping (Bool, String) -> Void) {
         usersDownloader.getUsers { users, errorMessage in
             guard let users = users, !users.isEmpty else {
-                completion([], errorMessage)
+                completion(false, errorMessage)
                 return
             }
             
-            completion(users, nil)
+            completion(true, .empty)
         }
     }
-    
 }

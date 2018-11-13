@@ -8,7 +8,7 @@ def testing_pods
     pod 'ObjectMapper'
 end
 
-target 'PeopleRoulette-finished' do
+target 'PeopleRoulette-starter' do
   use_frameworks!
 
   pod 'RealmSwift'
@@ -20,7 +20,7 @@ target 'PeopleRoulette-finished' do
   pod 'ObjectMapper+Realm'
   pod 'ObjectMapperAdditions/Realm'
 
-  target 'PeopleRoulette-finishedTests' do
+  target 'PeopleRoulette-starterTests' do
       testing_pods
   end
 

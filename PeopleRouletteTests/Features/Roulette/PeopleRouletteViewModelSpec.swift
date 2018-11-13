@@ -6,49 +6,45 @@
 //  Copyright © 2018 AppCoda. All rights reserved.
 //
 
-import Foundation
 import Quick
 import Nimble
 
-@testable import PeopleRoulette
+@testable import PeopleRoulette_starter
 
 class PeopleRouletteViewModelSpec: QuickSpec {
     override func spec() {
         let viewModel = PeopleRouletteViewModel()
         
         describe("Given a roulette") {
+            // 1
             context("and downloading of users is successful") {
                 beforeEach {
-                    viewModel.usersDownloader = MockUsersDownloader(users: MockUsers.data, message: nil)
+                    viewModel.usersDownloader = MockUsersDownloader(users: MockUsers.data, message: .empty)
                 }
                 
                 it("should get the correct response") {
-                    waitUntil(timeout: 3.0) { done in
-                        viewModel.getUsers(completion: { users, errorMessage in
-                            expect(errorMessage).to(beNil())
-                            expect(users.isEmpty).toNot(beTrue())
-                        })
-                        done()
-                    }
+                    viewModel.getUsers(completion: { success, errorMessage in
+                        expect(errorMessage).to(equal(.empty))
+                        expect(success).to(beTrue())
+                    })
                 }
             }
             
+            // 2
             context("and downloading of users is unsuccessful") {
                 beforeEach {
                     viewModel.usersDownloader = MockUsersDownloader(users: [], message: AlertMessage.requestFailure)
                 }
                 
                 it("should get the correct response") {
-                    waitUntil(timeout: 3.0) { done in
-                        viewModel.getUsers(completion: { users, errorMessage in
-                            expect(errorMessage).to(equal(AlertMessage.requestFailure))
-                            expect(users.isEmpty).to(beTrue())
-                        })
-                        done()
-                    }
+                    viewModel.getUsers(completion: { success, errorMessage in
+                        expect(errorMessage).to(equal(AlertMessage.requestFailure))
+                        expect(success).to(beFalse())
+                    })
                 }
             }
             
+            // 3
             context("and there are 3 available users") {
                 beforeEach {
                     viewModel.usersRetriever = MockUsersRetriever()
@@ -61,26 +57,31 @@ class PeopleRouletteViewModelSpec: QuickSpec {
                 it("should allow selection of maximum 3 people") {
                     expect(viewModel.maxCount).to(equal(3))
                 }
+                
+                it("should populate picker data correctly") {
+                    expect(viewModel.pickerData).to(equal([1, 2, 3]))
+                }
             }
         }
     }
 }
 
+// 4
 class MockUsersDownloader: UsersDownloading {
-    
     var users: [User]?
-    var message: String?
+    var message: String
     
-    init(users: [User]?, message: String?) {
+    init(users: [User]?, message: String) {
         self.users = users
         self.message = message
     }
     
-    func getUsers(completion: @escaping ([User]?, String?) -> Void) {
+    func getUsers(completion: @escaping ([User]?, String) -> Void) {
         completion(users, message)
     }
 }
 
+// 5
 class MockUsersRetriever: UsersRetrieving {
     func loadUsers() -> [User]? {
         return MockUsers.data

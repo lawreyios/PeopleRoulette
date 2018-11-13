@@ -11,7 +11,7 @@ import Quick
 import Swinject
 import SwinjectStoryboard
 
-@testable import PeopleRoulette
+@testable import PeopleRoulette_starter
 
 class ViewControllerInjectorSpec: QuickSpec {
     override func spec() {

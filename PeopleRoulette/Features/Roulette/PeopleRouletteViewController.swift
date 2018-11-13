@@ -15,7 +15,7 @@ class PeopleRouletteViewController: UIViewController {
     
     var peopleRouletteViewModel: PeopleRouletteViewModel!
     var viewControllerInjector: ViewControllerInjecting!
-    
+
     lazy var activityIndicator: UIActivityIndicatorView = {
         let activityIndicator = UIActivityIndicatorView(style: .gray)
         activityIndicator.center = view.center
@@ -60,9 +60,10 @@ class PeopleRouletteViewController: UIViewController {
     
     private func getUsers() {
         showLoadingSpinner()
-        peopleRouletteViewModel.getUsers { [weak self] users, errorMessage in
-            guard !users.isEmpty else {
-                self?.showErrorAlert(with: errorMessage ?? "Error getting users.")
+        peopleRouletteViewModel.getUsers { [weak self] success, errorMessage in
+            guard success else {
+                self?.hideLoadingSpinner()
+                self?.showErrorAlert(with: errorMessage)
                 return
             }
             
